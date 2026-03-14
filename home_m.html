@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LusFam Energy Trading</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0b3f6f",
+                        "accent": "#f97316", /* Energy Gold/Orange accent */
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#111921",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<!-- Header -->
+<header class="sticky top-0 z-50 flex items-center bg-white/90 dark:bg-background-dark/90 backdrop-blur-md px-4 py-3 border-b border-primary/10 justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">menu</span>
+</div>
+<h1 class="text-primary dark:text-slate-100 text-lg font-bold tracking-tight">LusFam Energy</h1>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">search</span>
+<span class="material-symbols-outlined text-primary">account_circle</span>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative">
+<div class="w-full aspect-[4/5] bg-cover bg-center flex flex-col justify-end relative" data-alt="Industrial oil refinery at sunset with orange sky" style="background-image: linear-gradient(0deg, rgba(11, 63, 111, 0.9) 0%, rgba(0, 0, 0, 0) 50%), url('https://lh3.googleusercontent.com/aida-public/AB6AXuATFxQSolvQq0OJz_It1c-SdHTq8dOrDvSzLYT-d_LW4L8w61iIQWB6_kLEGNXF2WbWD6bEVrRxBJQCFWmI1zNVGkvX6kaXk2vbNuoCfT8cJUiWvfGEhXI0Jm5WwBQGfj2QkrlT85CJiBJvUBHikybxndr8II-JCKdsYF0wNs2XWjDx-pAk2FiANEbB30XtEstZCC4P6KUUfOwSEfKrGlGyvDJ77SgtPJTVVuqXenV3UuZbAV5xdOdImv_EPyF6nwdRs_AlX6MCeg');">
+<div class="p-6 space-y-4">
+<span class="bg-accent text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded">Southern Africa Supply</span>
+<h2 class="text-white text-4xl font-bold leading-tight">Facilitating Petroleum Supply Across Southern Africa</h2>
+<p class="text-slate-200 text-base">Bridging international energy traders with growing fuel demand in Zimbabwe, Zambia, Botswana, Malawi, and Mozambique.</p>
+<a href="quote.html" class="w-full bg-accent hover:bg-orange-600 text-white font-bold py-4 rounded-lg shadow-lg flex items-center justify-center gap-2 transition-colors">
+<span>Request a Partnership</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Horizontal Swipeable Products -->
+<section class="py-8 px-4">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-xl font-bold text-primary dark:text-slate-100">Our Products</h3>
+<a class="text-accent text-sm font-semibold" href="services.html">View All</a>
+</div>
+<div class="flex gap-4 overflow-x-auto no-scrollbar snap-x">
+<!-- Card 1 -->
+<div class="min-w-[280px] snap-center bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-primary/5 shadow-sm">
+<div class="h-40 bg-cover bg-center" data-alt="Refined petroleum products in glass containers" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCtlU2nC89Fh_LX33M_dywWNT-1gm0s9bfJCKDBwnTDHLfU4Q8NFTD5-CykRnfsF8ACl5uz4-iXf0k_JNFx6v-RuzUP3a6UXYeAB_FDanWkkAlLfBGEGMeohSwGPiEsLOJUsXVV-SWPpIleW5jJgdybai9j5llC2D_p7sQZ19s-W2hBxERVDZ6HiLy0C2-FyCi0Qw8IFvDNki1r_m7K_ZsSgLsq0qynB0xlgLX7gA8agoRMYLFL9BB7Ft34gfGl1p9BnUM-SXNUYQ');"></div>
+<div class="p-4">
+<h4 class="font-bold text-lg">EN590 Diesel &amp; Gasoline</h4>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-1">10ppm ultra-low sulphur diesel and motor gasoline for transport, mining, and industrial sectors.</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="min-w-[280px] snap-center bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-primary/5 shadow-sm">
+<div class="h-40 bg-cover bg-center" data-alt="Natural gas storage tanks industrial setting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAcF4G2xcZ8-tnil__UMyDuPCaAnQeWnO18rzrTHAFkHzr2XfmIQuhoNBDhyanj-JToCC-lgF11mBXOenIRiUVjehRK8tHPPB2iePx0PTqs-MDFHAECEVxDgTZY6fMI1uNN5DVnS5czYPkPZKt73r_MIrD1Acqg-_YNdCwsxlSv5IoXo3iT_bLdSx8rRbDS_jRcDmS3q_huNlGp_7xtau7i2i8-CFQhflW64I1WHTpNLmbfsxLGopZi-Gy0CkpZxukZmbHoDh7z9w');"></div>
+<div class="p-4">
+<h4 class="font-bold text-lg">Jet A1 Aviation Fuel</h4>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-1">Aviation-grade kerosene for airlines and operators across regional airports in Southern Africa.</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="min-w-[280px] snap-center bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-primary/5 shadow-sm">
+<div class="h-40 bg-cover bg-center" data-alt="Wind turbines on a rolling green hill" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB_VBzRHsn9mgdoe-GLSG3juZQaaRYC0A2JYUHnbyWonCU-dA4zZDoFviTR4aSIUBDeJWIInhDwHd_jqOqRy2PaXSa2Jl4nKNhem4pkdO-2qbJ8r84NV3Hd3KMViPAL8ZLKXVyLvaKidtVxDwts8XVux2Y_IO4P2v_ymalCg-kzLX-n97HbT-plCKLOh0o5Iu2ZJCShL3uGH6uyyLtEIJ8Siq1BnhiGMgaSrk-rGAoaMlFhPUi0bwv0qv45nsAFLWACSHxzzVRifQ');"></div>
+<div class="p-4">
+<h4 class="font-bold text-lg">Fuel Oil</h4>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-1">Heavy fuel oil for industrial applications and power generation across the region.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Map Preview Accordion -->
+<section class="px-4 pb-12">
+<div class="bg-white dark:bg-slate-800 rounded-xl border border-primary/10 overflow-hidden">
+<button class="w-full flex items-center justify-between p-4 focus:outline-none">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">public</span>
+<span class="font-bold">Regional Operations</span>
+</div>
+<span class="material-symbols-outlined text-primary">expand_more</span>
+</button>
+<div class="px-4 pb-4">
+<div class="rounded-lg overflow-hidden h-48 relative border border-primary/5">
+<img class="w-full h-full object-cover grayscale opacity-80" data-alt="Monochrome world map showing trade routes" data-location="Global" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSvJal2UZ-Vhha-QA_vMXZYxLiwiKB9nKTLlbuzEaITsFz9iX2r22lJtQucRWEocMJz8b_-zq1aaUOCSzAfAYDk3NdQRrDcBS7VFzN2MT_7_wvB00ah8cNpJe7fjkxDvuhR0ES01SMgrTEtLf2tNMuB4eK2ObgEqlVFSkINh1PiCx7elmXwIuM1kqlYiozo28CyDHPEkAMXQKoJmpCLz3E_jQ1ho8TLMiLEhVj9uz7zBiuer8o7DpPaDqRiTIVoCZlbteN753XhA"/>
+<div class="absolute inset-0 bg-primary/10"></div>
+<!-- Map Markers -->
+<div class="absolute top-1/4 left-1/3 w-3 h-3 bg-accent rounded-full animate-pulse border-2 border-white"></div>
+<div class="absolute bottom-1/2 right-1/4 w-3 h-3 bg-accent rounded-full animate-pulse border-2 border-white"></div>
+<div class="absolute top-1/2 left-1/2 w-3 h-3 bg-accent rounded-full animate-pulse border-2 border-white"></div>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400 mt-3 text-center italic">Headquartered in Harare, serving Zimbabwe, Zambia, Botswana, Malawi &amp; Mozambique.</p>
+</div>
+</div>
+</section>
+<!-- Floating WhatsApp FAB -->
+<a class="fixed bottom-24 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl flex items-center justify-center" href="https://wa.me/263773540198">
+<svg class="w-7 h-7" fill="currentColor" viewbox="0 0 24 24">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path>
+</svg>
+</a>
+<!-- Bottom Nav & Persistent Trade Desk CTA -->
+<div class="fixed bottom-0 left-0 right-0 z-50">
+<!-- Persistent Bottom-Sheet CTA -->
+<div class="bg-primary text-white p-4 flex items-center justify-between border-t border-white/10 rounded-t-xl shadow-lg">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-accent">monitoring</span>
+<div>
+<p class="text-sm font-bold leading-none">Enquiries Open</p>
+<p class="text-[10px] opacity-70">Get in touch with our team</p>
+</div>
+</div>
+<a href="https://wa.me/263773540198" class="bg-white text-primary px-4 py-2 rounded-lg text-sm font-bold">Contact Us</a>
+</div>
+<!-- Bottom Navigation Bar -->
+<nav class="bg-white dark:bg-slate-900 border-t border-primary/10 px-4 py-2 pb-6 flex justify-between items-center">
+<a class="flex flex-col items-center gap-1 text-primary" href="home_m.html">
+<span class="material-symbols-outlined filled">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="markets.html">
+<span class="material-symbols-outlined">trending_up</span>
+<span class="text-[10px] font-medium">Markets</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="quote.html">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="text-[10px] font-medium">Enquire</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="about.html">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">About</span>
+</a>
+</nav>
+</div>
+<!-- Spacer for fixed bottom -->
+<div class="h-40"></div>
+</body></html>

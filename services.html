@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0b3f6f",
+                        "accent-gold": "#d4af37",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#111921",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>LusFam Energy - Products &amp; Services</title>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<header class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex h-16 items-center justify-between gap-8">
+<div class="flex items-center gap-2 text-primary dark:text-white">
+<img src="logo_lusfam.jpeg" alt="LusFam" class="h-8 w-auto"/>
+<h2 class="text-xl font-extrabold tracking-tight">LusFam Energy</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="services.html">Products</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="services.html">Services</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="logistics.html">Logistics</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="quote.html">Contact</a>
+</nav>
+<div class="flex items-center gap-4 flex-1 justify-end">
+<div class="relative max-w-xs w-full hidden lg:block">
+<span class="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
+<span class="material-symbols-outlined text-sm">search</span>
+</span>
+<input class="block w-full rounded-lg border-0 py-1.5 pl-10 pr-3 bg-slate-100 dark:bg-slate-800 focus:ring-2 focus:ring-primary sm:text-sm" placeholder="Search components..." type="text"/>
+</div>
+<a href="quote.html" class="bg-primary text-white px-5 py-2 rounded-lg text-sm font-bold hover:bg-primary/90 transition-all">
+                        Client Portal
+                    </a>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<div class="mb-8">
+<div class="flex items-center gap-2 text-xs font-medium text-slate-500 uppercase tracking-wider mb-2">
+<a class="hover:text-primary" href="home.html">Home</a>
+<span class="material-symbols-outlined text-[10px]">chevron_right</span>
+<span class="text-primary font-bold">Trading Catalog</span>
+</div>
+<h1 class="text-4xl font-black text-slate-900 dark:text-white tracking-tight">Energy Products &amp; Services</h1>
+<p class="mt-2 text-slate-600 dark:text-slate-400 max-w-2xl">Refined petroleum products and supply facilitation services for Southern African fuel markets.</p>
+</div>
+<div class="flex flex-col lg:flex-row gap-8">
+<aside class="w-full lg:w-64 flex-shrink-0">
+<div class="sticky top-24 space-y-6">
+<div>
+<h3 class="text-sm font-bold text-slate-900 dark:text-white mb-4 uppercase tracking-widest">Categories</h3>
+<div class="space-y-1">
+<button class="flex w-full items-center gap-3 px-3 py-2 rounded-lg bg-primary text-white font-medium">
+<span class="material-symbols-outlined text-lg">grid_view</span>
+<span class="text-sm">All Solutions</span>
+</button>
+<button class="flex w-full items-center gap-3 px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors font-medium">
+<span class="material-symbols-outlined text-lg">handshake</span>
+<span class="text-sm">Buyer Representation</span>
+</button>
+<button class="flex w-full items-center gap-3 px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors font-medium">
+<span class="material-symbols-outlined text-lg">public</span>
+<span class="text-sm">Supply Partnerships</span>
+</button>
+<button class="flex w-full items-center gap-3 px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors font-medium">
+<span class="material-symbols-outlined text-lg">local_shipping</span>
+<span class="text-sm">Logistics Coordination</span>
+</button>
+<button class="flex w-full items-center gap-3 px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors font-medium">
+<span class="material-symbols-outlined text-lg">oil_barrel</span>
+<span class="text-sm">Market Access</span>
+</button>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-primary/5 border border-primary/10">
+<h4 class="text-xs font-bold text-primary mb-2 uppercase">Need Help?</h4>
+<p class="text-xs text-slate-600 mb-3 leading-relaxed">Contact our expert desk for custom bulk configurations.</p>
+<button class="text-xs font-bold text-primary flex items-center gap-1 hover:underline">
+                            Chat with an agent <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</aside>
+<div class="flex-1">
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-6">
+<div class="group bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<div class="h-48 overflow-hidden relative">
+<div class="absolute inset-0 bg-center bg-cover transition-transform duration-500 group-hover:scale-105" data-alt="Modern solar farm panel installation close-up" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAgBmTLBSUT6zTsnB2X20-xSkAHqaUoGf5g0fqu2ttQi3rwj6INMxjtDRzOYDYoT1Q3d5IQ2SZNqUo_8h0Wf7KYmzGwleWjaMux65NN_7VrUuCaY9MRh6jFiwK1BLgu-ZIZ2f8lXdokaT2tdnxGS5tExoZV_q66kmd7gzE8nPnKr0NVr1TIi7lM2ushHPlcscvUGaxFaPIo-qw2pwqfU8pg1M3yaqcc-lPZPCfJD-Jst1bE5rvB9zHckCnurjXDVT8K1dqmOEECdg");'></div>
+<div class="absolute top-3 left-3 bg-accent-gold text-white text-[10px] font-black px-2 py-1 rounded uppercase tracking-tighter">Premium</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">EN590 Diesel 10ppm</h3>
+<span class="text-primary bg-primary/10 text-[10px] font-bold px-2 py-1 rounded-full uppercase">In Stock</span>
+</div>
+<div class="grid grid-cols-2 gap-2 mb-4 text-xs text-slate-500">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-accent-gold">verified</span> Ultra-Low Sulphur
+                                </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-accent-gold">history</span> SGS Certified
+                                </div>
+</div>
+<div class="flex flex-col gap-2">
+<button class="flex items-center justify-center gap-2 w-full py-2 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-lg text-sm font-semibold hover:bg-slate-200 transition-colors">
+<span class="material-symbols-outlined text-sm text-accent-gold">download</span>
+                                    Download Spec
+                                </button>
+<a href="quote.html" class="block w-full py-2 bg-primary text-white rounded-lg text-sm font-bold hover:bg-primary/90 transition-colors text-center">Request Quote</a>
+</div>
+</div>
+</div>
+<div class="group bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<div class="h-48 overflow-hidden relative">
+<div class="absolute inset-0 bg-center bg-cover transition-transform duration-500 group-hover:scale-105" data-alt="Large scale wind turbines on hills" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDd6jKfGQKe8T_cwiOR91ipWsPsQaOpEMMGm470f2_9ikIuCh5Ky52lMSojnOHbJIrgdmClOGtfRhuhhe4PUb9q1bZwTKD0yQQzK8De_9PlPuE4DZE6NcTj0y2uZi3C2SYf0Uzex8-cC4V_vCs45KRpmhe6solANFZ4FtRAfglvnY8XEMyir9XuTJpNRWEcqVAOSU-9zzpSdQK3Y9ocnB2AL_6yYQ8BUQk7YeoEKV4sqQI3Jl8WbAcs02YUXaMM2idoZxg59LWk7A");'></div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Utility Wind v4</h3>
+<span class="text-primary bg-primary/10 text-[10px] font-bold px-2 py-1 rounded-full uppercase">Custom Build</span>
+</div>
+<div class="grid grid-cols-2 gap-2 mb-4 text-xs text-slate-500">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-accent-gold">bolt</span> 3.5MW Output
+                                </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-accent-gold">settings</span> 120m Rotor
+                                </div>
+</div>
+<div class="flex flex-col gap-2">
+<button class="flex items-center justify-center gap-2 w-full py-2 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-lg text-sm font-semibold hover:bg-slate-200 transition-colors">
+<span class="material-symbols-outlined text-sm text-accent-gold">download</span>
+                                    Download Spec
+                                </button>
+<a href="quote.html" class="block w-full py-2 bg-primary text-white rounded-lg text-sm font-bold hover:bg-primary/90 transition-colors text-center">Request Quote</a>
+</div>
+</div>
+</div>
+<div class="group bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<div class="h-48 overflow-hidden relative">
+<div class="absolute inset-0 bg-center bg-cover transition-transform duration-500 group-hover:scale-105" data-alt="Grid energy storage container unit" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuASlkLxiq7Pshe3P8Okj7Gtq3hTasoo5UTTRXlQimXv0skEhoQP_4SE8EETYXazI1-oZPYtNUn74v5tghNirf15_WnSnfuDPF8xseqzyVbwQdHGOH92Kvn6w6znW9DdqvKncwuZfWid8k563RcqURJJYob1WY8ALgXV9ejBGWT6sF8aTg_kXDmPNe3WyowhCXdVI4qbQ6u0T02HiUdM__WfhQx6u4SPY-Hhs66CNSWnvVY3PPvBMdVHkapIVeQg_x-TR1is9j8I9A");'></div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Lithium Grid Stack</h3>
+<span class="text-primary bg-primary/10 text-[10px] font-bold px-2 py-1 rounded-full uppercase">In Stock</span>
+</div>
+<div class="grid grid-cols-2 gap-2 mb-4 text-xs text-slate-500">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-accent-gold">database</span> 10MWh Scale
+                                </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-accent-gold">refresh</span> 5000 Cycles
+                                </div>
+</div>
+<div class="flex flex-col gap-2">
+<button class="flex items-center justify-center gap-2 w-full py-2 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-lg text-sm font-semibold hover:bg-slate-200 transition-colors">
+<span class="material-symbols-outlined text-sm text-accent-gold">download</span>
+                                    Download Spec
+                                </button>
+<a href="quote.html" class="block w-full py-2 bg-primary text-white rounded-lg text-sm font-bold hover:bg-primary/90 transition-colors text-center">Request Quote</a>
+</div>
+</div>
+</div>
+<div class="group bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<div class="h-48 overflow-hidden relative">
+<div class="absolute inset-0 bg-center bg-cover transition-transform duration-500 group-hover:scale-105" data-alt="Refinery liquid fuel distillation columns" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCfA52gT6VcH241CtkwrQa9EybTk1lTZD2kvn6vvqil8rmx0zYkFAFEI78rn6qYjunNt-wfQGsKvh8FMgL-8RR3nP7wr1eSBmlQVWby_q8JugWhH6ailvvigadrR921qPZeuQ1qUvKDv9vs7e3Cm2ajlHSNSF5luGfeX2kUSLcVS8gD3ooWktXoU1vsawBiNdr6xxjXGLaFZ3p6Y6Qgeelc_YzhpAHtyMOt5LMC5BPhSdm2ReLsufyX4yrNYJjezYIx7XFXIJ2CsQ");'></div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Motor Gasoline</h3>
+<span class="text-primary bg-primary/10 text-[10px] font-bold px-2 py-1 rounded-full uppercase">Wholesale</span>
+</div>
+<div class="grid grid-cols-2 gap-2 mb-4 text-xs text-slate-500">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-accent-gold">water_drop</span> Low Sulfur
+                                </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-accent-gold">fitness_center</span> 740kg/m3
+                                </div>
+</div>
+<div class="flex flex-col gap-2">
+<button class="flex items-center justify-center gap-2 w-full py-2 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-lg text-sm font-semibold hover:bg-slate-200 transition-colors">
+<span class="material-symbols-outlined text-sm text-accent-gold">download</span>
+                                    Download Spec
+                                </button>
+<a href="quote.html" class="block w-full py-2 bg-primary text-white rounded-lg text-sm font-bold hover:bg-primary/90 transition-colors text-center">Request Quote</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="w-full lg:w-80 flex-shrink-0">
+<div class="sticky top-24 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xl overflow-hidden">
+<div class="bg-primary p-6 text-white">
+<h3 class="text-lg font-bold flex items-center gap-2">
+<span class="material-symbols-outlined">description</span>
+                            Quick RFQ Panel
+                        </h3>
+<p class="text-xs text-white/70 mt-1">Submit your requirements for a prioritized quote.</p>
+</div>
+<form class="p-6 space-y-4">
+<div>
+<label class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Inquiry Type</label>
+<select class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-sm focus:ring-primary">
+<option>Bulk Purchase</option>
+<option>Leasing Options</option>
+<option>Supply Partnership</option>
+</select>
+</div>
+<div>
+<label class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Preferred Product</label>
+<input class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-sm focus:ring-primary" placeholder="e.g. Solar X1, Turbine v4" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Company Email</label>
+<input class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-sm focus:ring-primary" placeholder="name@corporation.com" type="email"/>
+</div>
+<div class="pt-2">
+<button class="w-full bg-accent-gold text-white font-bold py-3 rounded-lg shadow-lg shadow-accent-gold/20 hover:brightness-110 transition-all flex items-center justify-center gap-2" type="submit">
+                                Send Quote Request
+                                <span class="material-symbols-outlined text-sm">send</span>
+</button>
+</div>
+<p class="text-[10px] text-center text-slate-400 mt-2">Response time: &lt; 4 business hours</p>
+</form>
+</div>
+<div class="mt-6 p-6 rounded-2xl bg-slate-900 text-white relative overflow-hidden">
+<div class="relative z-10">
+<span class="text-accent-gold font-bold text-xs uppercase tracking-widest">Global Reach</span>
+<h4 class="text-xl font-bold mt-2">LusFam Distribution Network</h4>
+<p class="text-sm text-slate-400 mt-2">Serving 5 Southern African markets with growing partnership networks.</p>
+<div class="mt-4 flex -space-x-2">
+<div class="h-8 w-8 rounded-full border-2 border-slate-900 bg-slate-700" data-alt="Avatar of logistics agent" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD0G47TOXInzHbNLDgB8JltqgP-NmpKyXPPHkv54g3atipBdd5B_UJFmdhy7gLosSgoKxPTyXL__0Z29d6YYKmsGa2sx5Yl8OYzt327rLdwfwYhTCkPoPAUeD_uPvkgyxiclzmW4-rRas84lcFQBFjwYegBV0TazCzTvJJTF-UeyU80HdnD7e6ZkfWZ1yRvSqcucqnu0duJaD_3HnyKpAHgUl0hZLmzhoGt1zD6JV3mct9bOYNJlkbFe3c_i7m2yM7edYa61ke0nA')"></div>
+<div class="h-8 w-8 rounded-full border-2 border-slate-900 bg-slate-600" data-alt="Avatar of trading manager" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAERC79wJs7c_tlOrCiRku8yYXMawnmGis1wVx6QUu_Y_3MnkCVYYHDeV96292O83OT41-RjFLpNxlVYpQWgsSeh5mK-BbatkTQpH63GfMAdlx1gX9FTj-58GUzh0EOsBBw1pspC-aeAel6-_IXdA6Lh16wB4ldxuV14g0V6Bu3u74KDHr0Rj_3TgoF75W-oHCFJ1kA3tN7SKpJVxnjHRtEPM0klSqIfm_bxQ8W1uFTxIE0ylKXgix2a6I6XIWwDC2g9vcEaD38xg')"></div>
+<div class="h-8 w-8 rounded-full border-2 border-slate-900 bg-slate-500 flex items-center justify-center text-[10px] font-bold">+12</div>
+</div>
+</div>
+<div class="absolute -bottom-4 -right-4 opacity-10">
+<span class="material-symbols-outlined text-9xl">public</span>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<footer class="mt-20 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark py-12">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="col-span-2 md:col-span-1">
+<div class="flex items-center gap-2 text-primary dark:text-white mb-6">
+<img src="logo_lusfam.jpeg" alt="LusFam" class="h-6 w-auto"/>
+<h2 class="text-lg font-bold tracking-tight">LusFam Energy</h2>
+</div>
+<p class="text-sm text-slate-500 leading-relaxed">Facilitating petroleum supply partnerships across Southern Africa.</p>
+</div>
+<div>
+<h4 class="text-sm font-bold uppercase tracking-widest mb-4">Resources</h4>
+<ul class="space-y-2 text-sm text-slate-500">
+<li><a class="hover:text-primary" href="services.html">Product Specifications</a></li>
+<li><a class="hover:text-primary" href="about.html">Corporate Profile</a></li>
+<li><a class="hover:text-primary" href="about.html">Partner Network</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-sm font-bold uppercase tracking-widest mb-4">Company</h4>
+<ul class="space-y-2 text-sm text-slate-500">
+<li><a class="hover:text-primary" href="about.html">About Us</a></li>
+<li><a class="hover:text-primary" href="markets.html">Our Markets</a></li>
+<li><a class="hover:text-primary" href="compliance.html">Compliance</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-sm font-bold uppercase tracking-widest mb-4">Contact</h4>
+<ul class="space-y-2 text-sm text-slate-500">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">mail</span>
+                            info@lusfamenergy.com
+                        </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">phone</span>
+                            +263 773 540 198
+                        </li>
+</ul>
+</div>
+</div>
+<div class="mt-12 pt-8 border-t border-slate-100 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-xs text-slate-400">© 2025 LusFam Energy Trading — A Division of LusFam Trust Investments (Pvt) Ltd.</p>
+<div class="flex gap-6">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">language</span>
+</a>
+<a class="text-slate-400 hover:text-primary transition-colors" 
