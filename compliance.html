@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-
 <html lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Compliance &amp; Documentation | LusFam Energy</title>
+<title>Compliance &amp; Documentation | LusFam Energy Trading</title>
+<meta name="description" content="Access LusFam Energy Trading's corporate documentation, due diligence protocols, and partnership verification processes."/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -27,217 +27,243 @@
         }
     </script>
 <style>
-        body { font-family: 'Inter', sans-serif; }
-        .material-symbols-outlined { font-size: 24px; }
-    </style>
+    body { font-family: 'Inter', sans-serif; }
+    .material-symbols-outlined { font-size: 24px; }
+    .mobile-menu { display: none; }
+    .mobile-menu.active { display: flex; }
+</style>
 </head>
 <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
 <div class="relative flex h-auto min-screen w-full flex-col overflow-x-hidden">
 <div class="layout-container flex h-full grow flex-col">
-<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 px-6 md:px-20 lg:px-40 py-4 bg-white dark:bg-background-dark">
-<div class="flex items-center gap-8">
-<div class="flex items-center gap-3 text-primary">
-<img src="logo_lusfam.jpeg" alt="LusFam Energy Trading" class="h-8 w-auto"/>
-<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight">LusFam Energy</h2>
-</div>
-<nav class="hidden md:flex items-center gap-6">
-<a class="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors text-sm font-medium" href="compliance.html">Compliance</a>
-<a class="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors text-sm font-medium" href="compliance.html">Documents</a>
-<a class="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors text-sm font-medium" href="compliance.html">KYC</a>
-<a class="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors text-sm font-medium" href="compliance.html">Legal</a>
-</nav>
-</div>
-<div class="flex flex-1 justify-end gap-4 md:gap-8">
-<label class="hidden sm:flex flex-col min-w-40 !h-10 max-w-64">
-<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
-<div class="text-slate-400 flex border-none bg-primary/5 items-center justify-center pl-4 rounded-l-lg" data-icon="search">
-<span class="material-symbols-outlined text-[20px]">search</span>
-</div>
-<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-slate-900 focus:outline-0 focus:ring-1 focus:ring-primary border-none bg-primary/5 h-full placeholder:text-slate-400 px-4 rounded-l-none pl-2 text-sm font-normal" placeholder="Search compliance files" value=""/>
-</div>
-</label>
-<div class="bg-primary/10 border border-primary/20 bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 flex items-center justify-center" data-alt="User profile placeholder">
-<span class="material-symbols-outlined text-primary">account_circle</span>
-</div>
-</div>
+
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-white/95 dark:bg-background-dark/95 border-b border-primary/10 backdrop-blur-sm px-6 md:px-20 lg:px-40 py-4">
+    <div class="flex items-center justify-between">
+        <div class="flex items-center gap-8">
+            <a href="home.html" class="flex items-center gap-3 text-primary">
+                <img src="logo_lusfam.jpeg" alt="LusFam Energy Trading" class="h-8 w-auto"/>
+                <h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight">LusFam Energy</h2>
+            </a>
+            <nav class="hidden md:flex items-center gap-8">
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="home.html">Home</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="about.html">About</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="services.html">Products</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="markets.html">Markets</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="logistics.html">Logistics</a>
+                <a class="text-sm font-bold text-primary border-b-2 border-primary pb-1" href="compliance.html">Compliance</a>
+            </nav>
+        </div>
+        <div class="flex flex-1 justify-end gap-4 md:gap-8 items-center">
+            <a href="quote.html" class="bg-primary text-white px-5 py-2 rounded-lg text-sm font-bold hover:bg-primary/90 transition-all hidden sm:flex">
+                Get Quote
+            </a>
+            <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-600 hover:bg-primary/5 rounded-lg">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+    </div>
+    <div id="mobile-menu" class="mobile-menu flex-col bg-white dark:bg-background-dark border-t border-primary/10 md:hidden mt-4">
+        <a class="px-4 py-3 text-sm font-medium hover:bg-slate-50" href="home.html">Home</a>
+        <a class="px-4 py-3 text-sm font-medium hover:bg-slate-50" href="about.html">About</a>
+        <a class="px-4 py-3 text-sm font-medium hover:bg-slate-50" href="services.html">Products</a>
+        <a class="px-4 py-3 text-sm font-medium hover:bg-slate-50" href="markets.html">Markets</a>
+        <a class="px-4 py-3 text-sm font-medium hover:bg-slate-50" href="logistics.html">Logistics</a>
+        <a class="px-4 py-3 text-sm font-bold text-primary border-l-4 border-primary bg-primary/5" href="compliance.html">Compliance</a>
+        <a class="px-4 py-3 text-sm font-medium hover:bg-slate-50" href="quote.html">Contact / Quote</a>
+    </div>
 </header>
+
 <main class="px-6 md:px-20 lg:px-40 py-10 max-w-[1280px] mx-auto w-full">
-<section class="flex flex-wrap justify-between items-end gap-6 mb-12">
-<div class="flex flex-col gap-3">
-<h1 class="text-slate-900 dark:text-slate-100 text-4xl font-black leading-tight tracking-tight">Compliance &amp; Documentation</h1>
-<p class="text-slate-600 dark:text-slate-400 text-lg max-w-2xl">Transparency is at the heart of our operations. Access our corporate documentation, due diligence protocols, and partnership verification processes below.</p>
-</div>
-<button class="flex items-center gap-2 cursor-pointer rounded-lg h-11 px-6 bg-primary text-white text-sm font-bold tracking-wide hover:bg-primary/90 transition-all">
-<span class="material-symbols-outlined">download</span>
-<span>Download Company Profile</span>
-</button>
-</section>
-<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-<div class="lg:col-span-2 space-y-12">
-<div>
-<div class="flex items-center gap-2 mb-6">
-<span class="material-symbols-outlined text-primary">verified_user</span>
-<h2 class="text-slate-900 dark:text-slate-100 text-2xl font-bold">Our Commitments</h2>
-</div>
-<div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-<div class="flex flex-col items-center text-center p-4 bg-white dark:bg-primary/5 rounded-xl border border-primary/10">
-<div class="w-16 h-16 mb-3 bg-primary/10 rounded-full flex items-center justify-center text-primary">
-<span class="material-symbols-outlined text-3xl">handshake</span>
-</div>
-<p class="text-slate-900 dark:text-slate-100 text-sm font-bold">Transparency</p>
-<p class="text-slate-500 text-xs mt-1">Open Engagement</p>
-</div>
-<div class="flex flex-col items-center text-center p-4 bg-white dark:bg-primary/5 rounded-xl border border-primary/10">
-<div class="w-16 h-16 mb-3 bg-primary/10 rounded-full flex items-center justify-center text-primary">
-<span class="material-symbols-outlined text-3xl">search</span>
-</div>
-<p class="text-slate-900 dark:text-slate-100 text-sm font-bold">Due Diligence</p>
-<p class="text-slate-500 text-xs mt-1">Verification</p>
-</div>
-<div class="flex flex-col items-center text-center p-4 bg-white dark:bg-primary/5 rounded-xl border border-primary/10">
-<div class="w-16 h-16 mb-3 bg-primary/10 rounded-full flex items-center justify-center text-primary">
-<span class="material-symbols-outlined text-3xl">diversity_3</span>
-</div>
-<p class="text-slate-900 dark:text-slate-100 text-sm font-bold">Partnerships</p>
-<p class="text-slate-500 text-xs mt-1">Long-term Focus</p>
-</div>
-<div class="flex flex-col items-center text-center p-4 bg-white dark:bg-primary/5 rounded-xl border border-primary/10">
-<div class="w-16 h-16 mb-3 bg-primary/10 rounded-full flex items-center justify-center text-primary">
-<span class="material-symbols-outlined text-3xl">lock</span>
-</div>
-<p class="text-slate-900 dark:text-slate-100 text-sm font-bold">Compliance</p>
-<p class="text-slate-500 text-xs mt-1">Industry Standards</p>
-</div>
-</div>
-</div>
-<div>
-<div class="flex items-center gap-2 mb-6">
-<span class="material-symbols-outlined text-primary">description</span>
-<h2 class="text-slate-900 dark:text-slate-100 text-2xl font-bold">Corporate Documents</h2>
-</div>
-<div class="space-y-3">
-<div class="flex items-center justify-between p-4 bg-white dark:bg-primary/5 rounded-xl border border-primary/10 hover:shadow-md transition-shadow">
-<div class="flex items-center gap-4">
-<div class="p-2 bg-red-50 dark:bg-red-900/20 text-red-600 rounded-lg">
-<span class="material-symbols-outlined">picture_as_pdf</span>
-</div>
-<div>
-<h4 class="font-bold text-slate-800 dark:text-slate-200">LusFam Energy Trading — Corporate Profile</h4>
-<p class="text-xs text-slate-500">PDF • Company overview, services, leadership &amp; contact</p>
-</div>
-</div>
-<button class="text-primary hover:bg-primary/10 p-2 rounded-full transition-colors">
-<span class="material-symbols-outlined">download</span>
-</button>
-</div>
-<div class="flex items-center justify-between p-4 bg-white dark:bg-primary/5 rounded-xl border border-primary/10 hover:shadow-md transition-shadow">
-<div class="flex items-center gap-4">
-<div class="p-2 bg-red-50 dark:bg-red-900/20 text-red-600 rounded-lg">
-<span class="material-symbols-outlined">picture_as_pdf</span>
-</div>
-<div>
-<h4 class="font-bold text-slate-800 dark:text-slate-200">Company Registration Certificate</h4>
-<p class="text-xs text-slate-500">LusFam Trust Investments (Pvt) Ltd • Zimbabwe</p>
-</div>
-</div>
-<button class="text-primary hover:bg-primary/10 p-2 rounded-full transition-colors">
-<span class="material-symbols-outlined">download</span>
-</button>
-</div>
-<div class="flex items-center justify-between p-4 bg-white dark:bg-primary/5 rounded-xl border border-primary/10 hover:shadow-md transition-shadow">
-<div class="flex items-center gap-4">
-<div class="p-2 bg-red-50 dark:bg-red-900/20 text-red-600 rounded-lg">
-<span class="material-symbols-outlined">picture_as_pdf</span>
-</div>
-<div>
-<h4 class="font-bold text-slate-800 dark:text-slate-200">Director Identification &amp; Authorisation</h4>
-<p class="text-xs text-slate-500">Available upon request for verified partners</p>
-</div>
-</div>
-<button class="text-primary hover:bg-primary/10 p-2 rounded-full transition-colors">
-<span class="material-symbols-outlined">download</span>
-</button>
-</div>
-</div>
-</div>
-<div>
-<div class="flex items-center gap-2 mb-6">
-<span class="material-symbols-outlined text-primary">policy</span>
-<h2 class="text-slate-900 dark:text-slate-100 text-2xl font-bold">Legal Disclosures</h2>
-</div>
-<div class="p-6 bg-primary/5 dark:bg-primary/10 rounded-xl border border-primary/20">
-<p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed mb-4">
-                                    LusFam Energy Trading operates as the energy and commodities division of LusFam Trust Investments (Pvt) Ltd, a company registered in Zimbabwe. All supply facilitation activities are conducted in accordance with applicable local and international trade regulations.
-                                </p>
-<p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
-                                    LusFam Energy Trading acts as a facilitator and coordinator of petroleum supply transactions. All partnerships and transactions are subject to standard due diligence, verification, and mutual agreement between parties.
-                                </p>
-</div>
-</div>
-</div>
-<aside class="space-y-6">
-<div class="p-6 bg-white dark:bg-primary/10 rounded-xl border border-primary/10">
-<h3 class="text-slate-900 dark:text-slate-100 font-bold mb-4 flex items-center gap-2">
-<span class="material-symbols-outlined text-primary">fingerprint</span>
-                                KYC Process
-                            </h3>
-<p class="text-sm text-slate-600 dark:text-slate-400 mb-6">We conduct due diligence on all potential partners to ensure credible and transparent engagements.</p>
-<ul class="space-y-4">
-<li class="flex items-start gap-3">
-<div class="size-6 rounded-full bg-primary text-white text-[10px] flex items-center justify-center shrink-0">1</div>
-<div>
-<p class="text-sm font-semibold">Initial Enquiry Review</p>
-<p class="text-xs text-slate-500">Company details &amp; requirements</p>
-</div>
-</li>
-<li class="flex items-start gap-3">
-<div class="size-6 rounded-full bg-primary text-white text-[10px] flex items-center justify-center shrink-0">2</div>
-<div>
-<p class="text-sm font-semibold">Company Verification</p>
-<p class="text-xs text-slate-500">Registration, directors &amp; trade references</p>
-</div>
-</li>
-<li class="flex items-start gap-3">
-<div class="size-6 rounded-full bg-slate-200 dark:bg-primary/30 text-slate-500 text-[10px] flex items-center justify-center shrink-0">3</div>
-<div>
-<p class="text-sm font-semibold text-slate-400">Partnership Agreement</p>
-<p class="text-xs text-slate-500 italic">Terms, scope &amp; mutual commitments</p>
-</div>
-</li>
-</ul>
-<a href="mailto:info@lusfamenergy.com" class="block w-full mt-8 py-3 bg-primary text-white font-bold rounded-lg text-sm hover:opacity-90 transition-opacity text-center">
-                                Start a Conversation
-                            </a>
-</div>
-<div class="p-6 bg-slate-900 text-white rounded-xl shadow-lg relative overflow-hidden group">
-<div class="relative z-10">
-<h3 class="font-bold mb-2">Need to discuss compliance?</h3>
-<p class="text-sm text-slate-300 mb-4">Our team is available to discuss due diligence requirements and partnership verification processes.</p>
-<a class="text-sm font-bold underline flex items-center gap-1 group-hover:gap-2 transition-all" href="mailto:info@lusfamenergy.com">
-                                    Email Our Team <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</a>
-</div>
-<div class="absolute -right-4 -bottom-4 opacity-10">
-<span class="material-symbols-outlined text-9xl">gavel</span>
-</div>
-</div>
-</aside>
-</div>
+    <!-- Page Header -->
+    <section class="flex flex-wrap justify-between items-end gap-6 mb-12">
+        <div class="flex flex-col gap-3">
+            <h1 class="text-slate-900 dark:text-slate-100 text-4xl font-black leading-tight tracking-tight">Compliance &amp; Documentation</h1>
+            <p class="text-slate-600 dark:text-slate-400 text-lg max-w-2xl">Transparency is at the heart of our operations. Access our corporate documentation, due diligence protocols, and partnership verification processes below.</p>
+        </div>
+    </section>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="lg:col-span-2 space-y-12">
+            <!-- Commitments -->
+            <div>
+                <div class="flex items-center gap-2 mb-6">
+                    <span class="material-symbols-outlined text-primary">verified_user</span>
+                    <h2 class="text-slate-900 dark:text-slate-100 text-2xl font-bold">Our Commitments</h2>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                    <div class="flex flex-col items-center text-center p-4 bg-white dark:bg-primary/5 rounded-xl border border-primary/10">
+                        <div class="w-16 h-16 mb-3 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+                            <span class="material-symbols-outlined text-3xl">handshake</span>
+                        </div>
+                        <p class="text-slate-900 dark:text-slate-100 text-sm font-bold">Transparency</p>
+                        <p class="text-slate-500 text-xs mt-1">Open Engagement</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center p-4 bg-white dark:bg-primary/5 rounded-xl border border-primary/10">
+                        <div class="w-16 h-16 mb-3 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+                            <span class="material-symbols-outlined text-3xl">search</span>
+                        </div>
+                        <p class="text-slate-900 dark:text-slate-100 text-sm font-bold">Due Diligence</p>
+                        <p class="text-slate-500 text-xs mt-1">Verification</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center p-4 bg-white dark:bg-primary/5 rounded-xl border border-primary/10">
+                        <div class="w-16 h-16 mb-3 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+                            <span class="material-symbols-outlined text-3xl">diversity_3</span>
+                        </div>
+                        <p class="text-slate-900 dark:text-slate-100 text-sm font-bold">Partnerships</p>
+                        <p class="text-slate-500 text-xs mt-1">Long-term Focus</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center p-4 bg-white dark:bg-primary/5 rounded-xl border border-primary/10">
+                        <div class="w-16 h-16 mb-3 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+                            <span class="material-symbols-outlined text-3xl">lock</span>
+                        </div>
+                        <p class="text-slate-900 dark:text-slate-100 text-sm font-bold">Compliance</p>
+                        <p class="text-slate-500 text-xs mt-1">Industry Standards</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Corporate Documents -->
+            <div>
+                <div class="flex items-center gap-2 mb-6">
+                    <span class="material-symbols-outlined text-primary">description</span>
+                    <h2 class="text-slate-900 dark:text-slate-100 text-2xl font-bold">Corporate Documents</h2>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between p-4 bg-white dark:bg-primary/5 rounded-xl border border-primary/10 hover:shadow-md transition-shadow">
+                        <div class="flex items-center gap-4">
+                            <div class="p-2 bg-red-50 dark:bg-red-900/20 text-red-600 rounded-lg">
+                                <span class="material-symbols-outlined">picture_as_pdf</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 dark:text-slate-200">LusFam Energy Trading — Corporate Profile</h4>
+                                <p class="text-xs text-slate-500">PDF • Company overview, services, leadership &amp; contact</p>
+                            </div>
+                        </div>
+                        <button class="text-primary hover:bg-primary/10 p-2 rounded-full transition-colors">
+                            <span class="material-symbols-outlined">download</span>
+                        </button>
+                    </div>
+                    <div class="flex items-center justify-between p-4 bg-white dark:bg-primary/5 rounded-xl border border-primary/10 hover:shadow-md transition-shadow">
+                        <div class="flex items-center gap-4">
+                            <div class="p-2 bg-red-50 dark:bg-red-900/20 text-red-600 rounded-lg">
+                                <span class="material-symbols-outlined">picture_as_pdf</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 dark:text-slate-200">Company Registration Certificate</h4>
+                                <p class="text-xs text-slate-500">LusFam Trust Investments (Pvt) Ltd • Zimbabwe</p>
+                            </div>
+                        </div>
+                        <button class="text-primary hover:bg-primary/10 p-2 rounded-full transition-colors">
+                            <span class="material-symbols-outlined">download</span>
+                        </button>
+                    </div>
+                    <div class="flex items-center justify-between p-4 bg-white dark:bg-primary/5 rounded-xl border border-primary/10 hover:shadow-md transition-shadow">
+                        <div class="flex items-center gap-4">
+                            <div class="p-2 bg-red-50 dark:bg-red-900/20 text-red-600 rounded-lg">
+                                <span class="material-symbols-outlined">picture_as_pdf</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 dark:text-slate-200">Director Identification &amp; Authorisation</h4>
+                                <p class="text-xs text-slate-500">Available upon request for verified partners</p>
+                            </div>
+                        </div>
+                        <button class="text-primary hover:bg-primary/10 p-2 rounded-full transition-colors">
+                            <span class="material-symbols-outlined">download</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Legal Disclosures -->
+            <div>
+                <div class="flex items-center gap-2 mb-6">
+                    <span class="material-symbols-outlined text-primary">policy</span>
+                    <h2 class="text-slate-900 dark:text-slate-100 text-2xl font-bold">Legal Disclosures</h2>
+                </div>
+                <div class="p-6 bg-primary/5 dark:bg-primary/10 rounded-xl border border-primary/20">
+                    <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed mb-4">
+                        LusFam Energy Trading operates as the energy and commodities division of LusFam Trust Investments (Pvt) Ltd, a company registered in Zimbabwe. All supply facilitation activities are conducted in accordance with applicable local and international trade regulations.
+                    </p>
+                    <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+                        LusFam Energy Trading acts as a facilitator and coordinator of petroleum supply transactions. All partnerships and transactions are subject to standard due diligence, verification, and mutual agreement between parties.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="space-y-6">
+            <div class="p-6 bg-white dark:bg-primary/10 rounded-xl border border-primary/10">
+                <h3 class="text-slate-900 dark:text-slate-100 font-bold mb-4 flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary">fingerprint</span>
+                    KYC Process
+                </h3>
+                <p class="text-sm text-slate-600 dark:text-slate-400 mb-6">We conduct due diligence on all potential partners to ensure credible and transparent engagements.</p>
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-3">
+                        <div class="size-6 rounded-full bg-primary text-white text-[10px] flex items-center justify-center shrink-0">1</div>
+                        <div>
+                            <p class="text-sm font-semibold">Initial Enquiry Review</p>
+                            <p class="text-xs text-slate-500">Company details &amp; requirements</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <div class="size-6 rounded-full bg-primary text-white text-[10px] flex items-center justify-center shrink-0">2</div>
+                        <div>
+                            <p class="text-sm font-semibold">Company Verification</p>
+                            <p class="text-xs text-slate-500">Registration, directors &amp; trade references</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <div class="size-6 rounded-full bg-primary text-white text-[10px] flex items-center justify-center shrink-0">3</div>
+                        <div>
+                            <p class="text-sm font-semibold">Partnership Agreement</p>
+                            <p class="text-xs text-slate-500">Terms, scope &amp; mutual commitments</p>
+                        </div>
+                    </li>
+                </ul>
+                <a href="mailto:info@lusfamenergy.com" class="block w-full mt-8 py-3 bg-primary text-white font-bold rounded-lg text-sm hover:opacity-90 transition-opacity text-center">
+                    Start a Conversation
+                </a>
+            </div>
+            <div class="p-6 bg-slate-900 text-white rounded-xl shadow-lg relative overflow-hidden group">
+                <div class="relative z-10">
+                    <h3 class="font-bold mb-2">Need to discuss compliance?</h3>
+                    <p class="text-sm text-slate-300 mb-4">Our team is available to discuss due diligence requirements and partnership verification processes.</p>
+                    <a class="text-sm font-bold underline flex items-center gap-1 group-hover:gap-2 transition-all" href="mailto:info@lusfamenergy.com">
+                        Email Our Team <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </div>
+                <div class="absolute -right-4 -bottom-4 opacity-10">
+                    <span class="material-symbols-outlined text-9xl">gavel</span>
+                </div>
+            </div>
+        </aside>
+    </div>
 </main>
+
+<!-- Footer -->
 <footer class="mt-20 border-t border-primary/10 px-6 md:px-20 lg:px-40 py-10 bg-white dark:bg-background-dark">
-<div class="flex flex-col md:flex-row justify-between items-center gap-6">
-<div class="flex items-center gap-3">
-<img src="logo_lusfam.jpeg" alt="LusFam" class="h-6 w-auto"/>
-<span class="font-bold text-slate-900 dark:text-slate-100">LusFam Energy Trading</span>
-</div>
-<div class="flex gap-8 text-sm text-slate-500">
-<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
-<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
-<a class="hover:text-primary transition-colors" href="#">Cookie Settings</a>
-</div>
-<p class="text-xs text-slate-400">© 2025 LusFam Energy Trading — A Division of LusFam Trust Investments (Pvt) Ltd.</p>
-</div>
+    <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="flex items-center gap-3">
+            <img src="logo_lusfam.jpeg" alt="LusFam" class="h-6 w-auto"/>
+            <span class="font-bold text-slate-900 dark:text-slate-100">LusFam Energy Trading</span>
+        </div>
+        <div class="flex gap-8 text-sm text-slate-500">
+            <a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+            <a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+        </div>
+        <p class="text-xs text-slate-400">© 2026 LusFam Energy Trading — A Division of LusFam Trust Investments (Pvt) Ltd.</p>
+    </div>
 </footer>
+
 </div>
 </div>
+
+<script>
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.toggle('active');
+    });
+</script>
 </body></html>
