@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Markets &amp; Coverage | LusFam Energy Trading</title>
+<meta name="description" content="LusFam Energy Trading serves petroleum markets across Zimbabwe, Zambia, Botswana, Malawi, and Mozambique in the SADC region."/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -27,220 +28,198 @@
         }
     </script>
 <style>
-        .map-dot {
-            @apply absolute w-4 h-4 bg-energy-gold rounded-full border-2 border-white shadow-lg cursor-pointer;
-        }
-        .map-dot:hover .tooltip {
-            @apply block;
-        }
-    </style>
+    body { font-family: 'Inter', sans-serif; }
+    .map-dot {
+        position: absolute; width: 1rem; height: 1rem; background: #d4af37; border-radius: 9999px; border: 2px solid white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); cursor: pointer;
+    }
+    .map-dot:hover .tooltip { display: block; }
+    .mobile-menu { display: none; }
+    .mobile-menu.active { display: flex; }
+</style>
 </head>
 <body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
-<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
 <div class="layout-container flex h-full grow flex-col">
+
+<!-- Header -->
 <header class="flex items-center justify-between whitespace-nowrap border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark px-6 md:px-10 py-3 sticky top-0 z-50">
-<div class="flex items-center gap-8">
-<div class="flex items-center gap-3 text-primary">
-<img src="logo_lusfam.jpeg" alt="LusFam" class="h-8 w-auto"/>
-<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight">LusFam Energy</h2>
-</div>
-<div class="hidden md:flex items-center gap-9">
-<a class="text-primary text-sm font-bold border-b-2 border-primary pb-1" href="markets.html">Markets</a>
-<a class="text-slate-600 dark:text-slate-400 text-sm font-medium hover:text-primary transition-colors" href="markets.html">Coverage</a>
-<a class="text-slate-600 dark:text-slate-400 text-sm font-medium hover:text-primary transition-colors" href="logistics.html">Logistics</a>
-<a class="text-slate-600 dark:text-slate-400 text-sm font-medium hover:text-primary transition-colors" href="quote.html">Opportunities</a>
-</div>
-</div>
-<div class="flex flex-1 justify-end gap-4 items-center">
-<label class="hidden lg:flex flex-col min-w-40 !h-10 max-w-64">
-<div class="flex w-full flex-1 items-stretch rounded-lg h-full overflow-hidden border border-slate-200 dark:border-slate-700">
-<div class="text-slate-500 flex bg-slate-50 dark:bg-slate-800 items-center justify-center px-3 border-r border-slate-200 dark:border-slate-700">
-<span class="material-symbols-outlined text-lg">search</span>
-</div>
-<input class="form-input flex w-full min-w-0 flex-1 border-none bg-white dark:bg-slate-900 focus:ring-0 px-3 text-sm" placeholder="Search markets..."/>
-</div>
-</label>
-<button class="flex size-10 items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
-<span class="material-symbols-outlined">notifications</span>
-</button>
-<button class="flex size-10 items-center justify-center rounded-lg bg-primary text-white">
-<span class="material-symbols-outlined">person</span>
-</button>
-</div>
+    <div class="flex items-center gap-8">
+        <a href="home.html" class="flex items-center gap-3 text-primary">
+            <img src="logo_lusfam.jpeg" alt="LusFam" class="h-8 w-auto"/>
+            <h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight">LusFam Energy</h2>
+        </a>
+        <nav class="hidden md:flex items-center gap-8">
+            <a class="text-sm font-medium hover:text-primary transition-colors" href="home.html">Home</a>
+            <a class="text-sm font-medium hover:text-primary transition-colors" href="about.html">About</a>
+            <a class="text-sm font-medium hover:text-primary transition-colors" href="services.html">Products</a>
+            <a class="text-sm font-bold text-primary border-b-2 border-primary pb-1" href="markets.html">Markets</a>
+            <a class="text-sm font-medium hover:text-primary transition-colors" href="logistics.html">Logistics</a>
+            <a class="text-sm font-medium hover:text-primary transition-colors" href="compliance.html">Compliance</a>
+        </nav>
+    </div>
+    <div class="flex flex-1 justify-end gap-4 items-center">
+        <a href="quote.html" class="bg-primary text-white px-5 py-2 rounded-lg text-sm font-bold hover:bg-primary/90 transition-all hidden sm:flex">
+            Get Quote
+        </a>
+        <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-600 hover:bg-primary/5 rounded-lg">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
+    </div>
 </header>
+<div id="mobile-menu" class="mobile-menu flex-col bg-white dark:bg-background-dark border-t border-primary/10 md:hidden">
+    <a class="px-6 py-3 text-sm font-medium hover:bg-slate-50" href="home.html">Home</a>
+    <a class="px-6 py-3 text-sm font-medium hover:bg-slate-50" href="about.html">About</a>
+    <a class="px-6 py-3 text-sm font-medium hover:bg-slate-50" href="services.html">Products</a>
+    <a class="px-6 py-3 text-sm font-bold text-primary border-l-4 border-primary bg-primary/5" href="markets.html">Markets</a>
+    <a class="px-6 py-3 text-sm font-medium hover:bg-slate-50" href="logistics.html">Logistics</a>
+    <a class="px-6 py-3 text-sm font-medium hover:bg-slate-50" href="compliance.html">Compliance</a>
+    <a class="px-6 py-3 text-sm font-medium hover:bg-slate-50" href="quote.html">Contact / Quote</a>
+</div>
+
 <main class="flex flex-1 flex-col lg:flex-row overflow-hidden">
-<aside class="w-full lg:w-72 bg-white dark:bg-background-dark border-r border-slate-200 dark:border-slate-800 p-6 flex flex-col gap-6">
-<div>
-<h1 class="text-xl font-bold text-slate-900 dark:text-slate-100">Market Coverage</h1>
-<p class="text-slate-500 text-sm">Southern Africa Hub Operations</p>
-</div>
-<nav class="flex flex-col gap-2">
-<div class="flex items-center gap-3 px-4 py-3 rounded-xl bg-primary/10 text-primary">
-<span class="material-symbols-outlined">analytics</span>
-<p class="text-sm font-bold">Market Overview</p>
-</div>
-<div class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all cursor-pointer">
-<span class="material-symbols-outlined">public</span>
-<p class="text-sm font-medium">Regional Insights</p>
-</div>
-<div class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all cursor-pointer">
-<span class="material-symbols-outlined">local_shipping</span>
-<p class="text-sm font-medium">Trade Flow</p>
-</div>
-<div class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all cursor-pointer">
-<span class="material-symbols-outlined">verified_user</span>
-<p class="text-sm font-medium">Compliance</p>
-</div>
-</nav>
-<div class="mt-auto pt-6 border-t border-slate-100 dark:border-slate-800">
-<p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">View Overlays</p>
-<div class="flex flex-col gap-3">
-<label class="flex items-center justify-between cursor-pointer">
-<span class="text-sm font-medium">Logistics Overlay</span>
-<div class="relative inline-flex items-center">
-<input checked="" class="sr-only peer" type="checkbox"/>
-<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
-</div>
-</label>
-<label class="flex items-center justify-between cursor-pointer">
-<span class="text-sm font-medium">Market Access</span>
-<div class="relative inline-flex items-center">
-<input class="sr-only peer" type="checkbox"/>
-<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
-</div>
-</label>
-</div>
-</div>
-</aside>
-<div class="flex-1 flex flex-col min-h-0 relative">
-<div class="absolute top-4 left-4 z-10 flex gap-2">
-<div class="bg-white/90 dark:bg-slate-900/90 backdrop-blur shadow-xl rounded-lg p-1 flex border border-slate-200 dark:border-slate-700">
-<button class="px-4 py-2 text-xs font-bold bg-primary text-white rounded-md shadow-sm">Satellite</button>
-<button class="px-4 py-2 text-xs font-bold text-slate-600 dark:text-slate-400">Topographic</button>
-</div>
-</div>
-<div class="flex-1 bg-slate-200 dark:bg-slate-800 relative overflow-hidden">
-<div class="w-full h-full bg-cover bg-center" data-alt="Stylized energy trading map of Southern Africa" data-location="Southern Africa" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDNGAoix50PaSV9qXANJHYlgMcQZP7X0XvZ9WPUqtMwRI1la14HYTldipQufKLw4TirkHprvhAPa_MgNF58eo0dN8rC5IP76trxU7QreHHa-OFgD45jISsHiGeN18Nk2srudx2SzSQQciw6gvMztOvrbG7KDXYH25f2-lWIgEkFwK0kGPB07EGe4eWCqCvg7xoYKqcqvlVFinUQW7KdPlbl0UzuUdbKeGLRAOLGGw1dSCaCv2jQAF5wgdRwdTrgvIv0Cpu44yziGw')">
-<div class="map-dot top-[45%] left-[55%] ring-4 ring-energy-gold/30">
-<div class="tooltip hidden absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-white dark:bg-slate-900 p-3 rounded-lg shadow-2xl border border-slate-100 dark:border-slate-800 w-48 pointer-events-none">
-<p class="text-xs font-bold text-primary uppercase">Active Node</p>
-<p class="text-sm font-bold mt-1">Zimbabwe</p>
-<div class="mt-2 flex items-center justify-between text-[10px] text-slate-500">
-<span>Demand: High</span>
-<span>Grid: Stable</span>
-</div>
-</div>
-</div>
-<div class="map-dot top-[35%] left-[50%]">
-<div class="tooltip hidden absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-white dark:bg-slate-900 p-3 rounded-lg shadow-2xl border border-slate-100 dark:border-slate-800 w-48 pointer-events-none">
-<p class="text-sm font-bold">Zambia</p>
-</div>
-</div>
-<div class="map-dot top-[55%] left-[45%]">
-<div class="tooltip hidden absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-white dark:bg-slate-900 p-3 rounded-lg shadow-2xl border border-slate-100 dark:border-slate-800 w-48 pointer-events-none">
-<p class="text-sm font-bold">Botswana</p>
-</div>
-</div>
-<div class="map-dot top-[30%] left-[62%]">
-<div class="tooltip hidden absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-white dark:bg-slate-900 p-3 rounded-lg shadow-2xl border border-slate-100 dark:border-slate-800 w-48 pointer-events-none">
-<p class="text-sm font-bold">Malawi</p>
-</div>
-</div>
-<div class="map-dot top-[48%] left-[68%]">
-<div class="tooltip hidden absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-white dark:bg-slate-900 p-3 rounded-lg shadow-2xl border border-slate-100 dark:border-slate-800 w-48 pointer-events-none">
-<p class="text-sm font-bold">Mozambique</p>
-</div>
-</div>
-</div>
-<div class="absolute bottom-6 right-6 flex flex-col gap-2">
-<button class="bg-white dark:bg-slate-900 p-2 rounded-lg shadow-lg border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300">
-<span class="material-symbols-outlined">add</span>
-</button>
-<button class="bg-white dark:bg-slate-900 p-2 rounded-lg shadow-lg border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300">
-<span class="material-symbols-outlined">remove</span>
-</button>
-<button class="bg-white dark:bg-slate-900 p-2 rounded-lg shadow-lg border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 mt-2">
-<span class="material-symbols-outlined">my_location</span>
-</button>
-</div>
-<div class="absolute bottom-6 left-6">
-<div class="bg-white/95 dark:bg-slate-900/95 backdrop-blur-md p-4 rounded-xl shadow-2xl border border-slate-200 dark:border-slate-700 max-w-xs">
-<div class="flex items-center gap-3 mb-3">
-<div class="w-10 h-10 rounded-lg bg-energy-gold/20 flex items-center justify-center text-energy-gold">
-<span class="material-symbols-outlined">bolt</span>
-</div>
-<div>
-<p class="text-xs font-bold text-slate-500 uppercase">Selected Node</p>
-<h3 class="text-lg font-bold">Zimbabwe Hub</h3>
-</div>
-</div>
-<p class="text-sm text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
-                                    Primary hub for petroleum supply facilitation. Active logistics coordination with partners across Zambia and Mozambique.
-                                </p>
-<button class="w-full bg-primary text-white font-bold py-2.5 rounded-lg flex items-center justify-center gap-2 hover:bg-primary/90 transition-all">
-<span>Market Details</span>
-<span class="material-symbols-outlined text-sm">arrow_forward</span>
-</button>
-</div>
-</div>
-</div>
-</div>
-<aside class="w-full lg:w-80 bg-white dark:bg-background-dark border-l border-slate-200 dark:border-slate-800 flex flex-col">
-<div class="p-6 border-b border-slate-100 dark:border-slate-800">
-<h2 class="text-lg font-bold">Market Highlights</h2>
-<p class="text-xs text-slate-500 mt-1">Real-time trading opportunities</p>
-</div>
-<div class="flex-1 overflow-y-auto p-4 space-y-4">
-<div class="group p-4 rounded-xl border border-slate-100 dark:border-slate-800 hover:border-primary/30 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all cursor-pointer shadow-sm">
-<div class="flex justify-between items-start mb-2">
-<span class="px-2 py-0.5 rounded bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-[10px] font-bold">OPEN</span>
-<span class="text-[10px] text-slate-400 font-medium">Updated 2m ago</span>
-</div>
-<h4 class="font-bold text-slate-900 dark:text-slate-100">Zambia Diesel Supply</h4>
-<p class="text-xs text-slate-500 mt-1 mb-4">EN590 diesel supply facilitation for mining sector...</p>
-<button class="w-full py-2 bg-primary/10 group-hover:bg-primary text-primary group-hover:text-white text-xs font-bold rounded-lg transition-all">
-                                View Opportunity
-                            </button>
-</div>
-<div class="group p-4 rounded-xl border border-slate-100 dark:border-slate-800 hover:border-primary/30 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all cursor-pointer shadow-sm">
-<div class="flex justify-between items-start mb-2">
-<span class="px-2 py-0.5 rounded bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 text-[10px] font-bold">AUCTION</span>
-<span class="text-[10px] text-slate-400 font-medium">Closes in 4h</span>
-</div>
-<h4 class="font-bold text-slate-900 dark:text-slate-100">Mozambique Port Access</h4>
-<p class="text-xs text-slate-500 mt-1 mb-4">Fuel import coordination via Maputo corridor...</p>
-<button class="w-full py-2 bg-primary/10 group-hover:bg-primary text-primary group-hover:text-white text-xs font-bold rounded-lg transition-all">
-                                View Opportunity
-                            </button>
-</div>
-<div class="group p-4 rounded-xl border border-slate-100 dark:border-slate-800 hover:border-primary/30 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all cursor-pointer shadow-sm opacity-75">
-<div class="flex justify-between items-start mb-2">
-<span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-[10px] font-bold">PENDING</span>
-<span class="text-[10px] text-slate-400 font-medium">Verification</span>
-</div>
-<h4 class="font-bold text-slate-900 dark:text-slate-100">Botswana Fuel Distribution</h4>
-<p class="text-xs text-slate-500 mt-1 mb-4">Gasoline and diesel distribution partnership...</p>
-<button class="w-full py-2 bg-primary/10 group-hover:bg-primary text-primary group-hover:text-white text-xs font-bold rounded-lg transition-all">
-                                View Opportunity
-                            </button>
-</div>
-</div>
-<div class="p-6 bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
-<div class="flex items-center gap-3 mb-4">
-<div class="flex -space-x-2">
-<img alt="Team member" class="w-8 h-8 rounded-full border-2 border-white dark:border-slate-900" data-alt="Analyst profile picture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbPH1Dskzav5qBw3iMYAcLpS9OPhyWyGG4zCBNdlalaU8VJNWIM9jPTM_AIjfVUfDHdAwtc_OPi7WKXG_QHGdZqLSD1CBT46LJxnZlabdoRTVsp3zFmFXnbBATiL0cryEOtvc3gnhMhsUPFwlCBrU0eNSkB1yQXCN-0Buj2IGYYQ_JCvfgjztGP37vCn_6i1UF7-kdIlIhrwHj6kXJ87O2SmKjOoJ1NnheowRA48FFScx279hutap2al0Piq5mztJgsEvLr7Zw8A"/>
-<img alt="Team member" class="w-8 h-8 rounded-full border-2 border-white dark:border-slate-900" data-alt="Trader profile picture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDB_DqcRidBdYXyIrNZSqvfd4KftDGYoEj_gPSMbatNhZIpf5dnbc3y50PKb4ZsjSsP4nGsg_WcTKmVwlw2BGsqd-1H5-1s8wrJq7WWEprO0vL0DcW96noDzlrjAxNDoiqb39lZVGHVhyMxaFrRkVJg0CmSbUpP-FmnPWqNJFuZaW3cWgc_5VjsSzVPevu1kor7AmcYNmXZuL0kGjI62D1fvu7CDd71kiQFzkNdv2LQJJIKckWUHsIurKoqyZdvgyTCZ5hS87eyHQ"/>
-<div class="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700 border-2 border-white dark:border-slate-900 flex items-center justify-center text-[10px] font-bold">+4</div>
-</div>
-<p class="text-[10px] text-slate-500 font-medium">Experts online now</p>
-</div>
-<button class="w-full py-3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-bold rounded-xl shadow-sm flex items-center justify-center gap-2">
-<span class="material-symbols-outlined text-lg">chat_bubble</span>
-<span>Talk to an Expert</span>
-</button>
-</div>
-</aside>
+    <!-- Left Sidebar -->
+    <aside class="w-full lg:w-72 bg-white dark:bg-background-dark border-r border-slate-200 dark:border-slate-800 p-6 flex flex-col gap-6">
+        <div>
+            <h1 class="text-xl font-bold text-slate-900 dark:text-slate-100">Market Coverage</h1>
+            <p class="text-slate-500 text-sm">Southern Africa Hub Operations</p>
+        </div>
+        <nav class="flex flex-col gap-2">
+            <div class="flex items-center gap-3 px-4 py-3 rounded-xl bg-primary/10 text-primary">
+                <span class="material-symbols-outlined">analytics</span>
+                <p class="text-sm font-bold">Market Overview</p>
+            </div>
+            <div class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all cursor-pointer">
+                <span class="material-symbols-outlined">public</span>
+                <p class="text-sm font-medium">Regional Insights</p>
+            </div>
+            <div class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all cursor-pointer">
+                <span class="material-symbols-outlined">local_shipping</span>
+                <p class="text-sm font-medium">Trade Flow</p>
+            </div>
+            <div class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all cursor-pointer">
+                <span class="material-symbols-outlined">verified_user</span>
+                <p class="text-sm font-medium">Compliance</p>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- Map Area -->
+    <div class="flex-1 flex flex-col min-h-0 relative">
+        <div class="absolute top-4 left-4 z-10 flex gap-2">
+            <div class="bg-white/90 dark:bg-slate-900/90 backdrop-blur shadow-xl rounded-lg p-1 flex border border-slate-200 dark:border-slate-700">
+                <button class="px-4 py-2 text-xs font-bold bg-primary text-white rounded-md shadow-sm">Satellite</button>
+                <button class="px-4 py-2 text-xs font-bold text-slate-600 dark:text-slate-400">Topographic</button>
+            </div>
+        </div>
+        <div class="flex-1 bg-slate-200 dark:bg-slate-800 relative overflow-hidden min-h-[400px]">
+            <div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDNGAoix50PaSV9qXANJHYlgMcQZP7X0XvZ9WPUqtMwRI1la14HYTldipQufKLw4TirkHprvhAPa_MgNF58eo0dN8rC5IP76trxU7QreHHa-OFgD45jISsHiGeN18Nk2srudx2SzSQQciw6gvMztOvrbG7KDXYH25f2-lWIgEkFwK0kGPB07EGe4eWCqCvg7xoYKqcqvlVFinUQW7KdPlbl0UzuUdbKeGLRAOLGGw1dSCaCv2jQAF5wgdRwdTrgvIv0Cpu44yziGw')">
+                <div class="map-dot top-[45%] left-[55%] ring-4 ring-energy-gold/30">
+                    <div class="tooltip hidden absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-white dark:bg-slate-900 p-3 rounded-lg shadow-2xl border border-slate-100 dark:border-slate-800 w-48 pointer-events-none">
+                        <p class="text-xs font-bold text-primary uppercase">Active Node</p>
+                        <p class="text-sm font-bold mt-1">Zimbabwe</p>
+                        <div class="mt-2 flex items-center justify-between text-[10px] text-slate-500">
+                            <span>Demand: High</span>
+                            <span>Grid: Stable</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-dot top-[35%] left-[50%]">
+                    <div class="tooltip hidden absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-white dark:bg-slate-900 p-3 rounded-lg shadow-2xl border border-slate-100 dark:border-slate-800 w-48 pointer-events-none">
+                        <p class="text-sm font-bold">Zambia</p>
+                    </div>
+                </div>
+                <div class="map-dot top-[55%] left-[45%]">
+                    <div class="tooltip hidden absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-white dark:bg-slate-900 p-3 rounded-lg shadow-2xl border border-slate-100 dark:border-slate-800 w-48 pointer-events-none">
+                        <p class="text-sm font-bold">Botswana</p>
+                    </div>
+                </div>
+                <div class="map-dot top-[30%] left-[62%]">
+                    <div class="tooltip hidden absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-white dark:bg-slate-900 p-3 rounded-lg shadow-2xl border border-slate-100 dark:border-slate-800 w-48 pointer-events-none">
+                        <p class="text-sm font-bold">Malawi</p>
+                    </div>
+                </div>
+                <div class="map-dot top-[48%] left-[68%]">
+                    <div class="tooltip hidden absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-white dark:bg-slate-900 p-3 rounded-lg shadow-2xl border border-slate-100 dark:border-slate-800 w-48 pointer-events-none">
+                        <p class="text-sm font-bold">Mozambique</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Zimbabwe Hub Info -->
+            <div class="absolute bottom-6 left-6">
+                <div class="bg-white/95 dark:bg-slate-900/95 backdrop-blur-md p-4 rounded-xl shadow-2xl border border-slate-200 dark:border-slate-700 max-w-xs">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-lg bg-energy-gold/20 flex items-center justify-center text-energy-gold">
+                            <span class="material-symbols-outlined">bolt</span>
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-slate-500 uppercase">Selected Node</p>
+                            <h3 class="text-lg font-bold">Zimbabwe Hub</h3>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
+                        Primary hub for petroleum supply facilitation. Active logistics coordination with partners across Zambia and Mozambique.
+                    </p>
+                    <a href="quote.html" class="w-full bg-primary text-white font-bold py-2.5 rounded-lg flex items-center justify-center gap-2 hover:bg-primary/90 transition-all">
+                        <span>Enquire Now</span>
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Sidebar -->
+    <aside class="w-full lg:w-80 bg-white dark:bg-background-dark border-l border-slate-200 dark:border-slate-800 flex flex-col">
+        <div class="p-6 border-b border-slate-100 dark:border-slate-800">
+            <h2 class="text-lg font-bold">Market Highlights</h2>
+            <p class="text-xs text-slate-500 mt-1">Partnership opportunities</p>
+        </div>
+        <div class="flex-1 overflow-y-auto p-4 space-y-4">
+            <div class="group p-4 rounded-xl border border-slate-100 dark:border-slate-800 hover:border-primary/30 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all cursor-pointer shadow-sm">
+                <div class="flex justify-between items-start mb-2">
+                    <span class="px-2 py-0.5 rounded bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-[10px] font-bold">OPEN</span>
+                </div>
+                <h4 class="font-bold text-slate-900 dark:text-slate-100">Zambia Diesel Supply</h4>
+                <p class="text-xs text-slate-500 mt-1 mb-4">EN590 diesel supply facilitation for mining sector...</p>
+                <a href="quote.html" class="w-full py-2 bg-primary/10 group-hover:bg-primary text-primary group-hover:text-white text-xs font-bold rounded-lg transition-all block text-center">
+                    Enquire
+                </a>
+            </div>
+            <div class="group p-4 rounded-xl border border-slate-100 dark:border-slate-800 hover:border-primary/30 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all cursor-pointer shadow-sm">
+                <div class="flex justify-between items-start mb-2">
+                    <span class="px-2 py-0.5 rounded bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 text-[10px] font-bold">ACTIVE</span>
+                </div>
+                <h4 class="font-bold text-slate-900 dark:text-slate-100">Mozambique Port Access</h4>
+                <p class="text-xs text-slate-500 mt-1 mb-4">Fuel import coordination via Maputo corridor...</p>
+                <a href="quote.html" class="w-full py-2 bg-primary/10 group-hover:bg-primary text-primary group-hover:text-white text-xs font-bold rounded-lg transition-all block text-center">
+                    Enquire
+                </a>
+            </div>
+            <div class="group p-4 rounded-xl border border-slate-100 dark:border-slate-800 hover:border-primary/30 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all cursor-pointer shadow-sm opacity-75">
+                <div class="flex justify-between items-start mb-2">
+                    <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-[10px] font-bold">PENDING</span>
+                </div>
+                <h4 class="font-bold text-slate-900 dark:text-slate-100">Botswana Fuel Distribution</h4>
+                <p class="text-xs text-slate-500 mt-1 mb-4">Gasoline and diesel distribution partnership...</p>
+                <a href="quote.html" class="w-full py-2 bg-primary/10 group-hover:bg-primary text-primary group-hover:text-white text-xs font-bold rounded-lg transition-all block text-center">
+                    Enquire
+                </a>
+            </div>
+        </div>
+        <div class="p-6 bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+            <a href="https://wa.me/263773540198" class="w-full py-3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-bold rounded-xl shadow-sm flex items-center justify-center gap-2 hover:bg-primary hover:text-white hover:border-primary transition-all">
+                <span class="material-symbols-outlined text-lg">chat_bubble</span>
+                <span>Talk to Our Team</span>
+            </a>
+        </div>
+    </aside>
 </main>
 </div>
 </div>
+
+<script>
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.toggle('active');
+    });
+</script>
 </body></html>
