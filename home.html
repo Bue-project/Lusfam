@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-
 <html lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -31,300 +30,357 @@
         .hero-gradient {
             background: linear-gradient(90deg, rgba(11, 63, 111, 0.9) 0%, rgba(11, 63, 111, 0.4) 100%);
         }
+        .mobile-menu { display: none; }
+        .mobile-menu.active { display: flex; }
     </style>
+<title>LusFam Energy Trading | Bulk Petroleum Products Across Southern Africa</title>
+<meta name="description" content="LusFam Energy Trading facilitates sourcing, supply coordination, and logistics for refined petroleum products across Southern African markets. EN590 Diesel, Jet A1, Gasoline, and Fuel Oil."/>
 </head>
 <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+
 <!-- Header / Nav -->
 <header class="sticky top-0 z-50 bg-white/95 dark:bg-background-dark/95 border-b border-primary/10 backdrop-blur-sm">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex justify-between items-center h-20">
-<!-- Logo -->
-<div class="flex items-center gap-2">
-<img src="logo_lusfam.jpeg" alt="LusFam Energy Trading" class="h-10 w-auto"/>
-<span class="text-2xl font-black tracking-tight text-primary">LusFam</span>
-</div>
-<!-- Desktop Nav -->
-<nav class="hidden md:flex items-center gap-8">
-<a class="text-sm font-semibold hover:text-primary transition-colors" href="services.html">Products</a>
-<a class="text-sm font-semibold hover:text-primary transition-colors" href="markets.html">Markets</a>
-<a class="text-sm font-semibold hover:text-primary transition-colors" href="logistics.html">Logistics</a>
-<a class="text-sm font-semibold hover:text-primary transition-colors" href="about.html">About</a>
-</nav>
-<!-- Actions -->
-<div class="flex items-center gap-4">
-<button class="p-2 text-slate-600 dark:text-slate-400 hover:bg-primary/5 rounded-lg">
-<span class="material-symbols-outlined">globe</span>
-</button>
-<a href="https://wa.me/263773540198" class="p-2 text-[#25D366] hover:bg-[#25D366]/10 rounded-lg">
-<span class="material-symbols-outlined">chat</span>
-</a>
-<a href="quote.html" class="hidden lg:flex bg-energy-gold hover:bg-energy-gold/90 text-white px-6 py-2.5 rounded-lg font-bold text-sm tracking-wide transition-all shadow-lg shadow-energy-gold/20">
-                        Request a Quote
-                    </a>
-</div>
-</div>
-</div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+            <!-- Logo -->
+            <a href="home.html" class="flex items-center gap-2">
+                <img src="logo_lusfam.jpeg" alt="LusFam Energy Trading" class="h-10 w-auto"/>
+                <span class="text-2xl font-black tracking-tight text-primary">LusFam</span>
+            </a>
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a class="text-sm font-bold text-primary border-b-2 border-primary pb-1" href="home.html">Home</a>
+                <a class="text-sm font-semibold hover:text-primary transition-colors" href="about.html">About</a>
+                <a class="text-sm font-semibold hover:text-primary transition-colors" href="services.html">Products</a>
+                <a class="text-sm font-semibold hover:text-primary transition-colors" href="markets.html">Markets</a>
+                <a class="text-sm font-semibold hover:text-primary transition-colors" href="logistics.html">Logistics</a>
+                <a class="text-sm font-semibold hover:text-primary transition-colors" href="compliance.html">Compliance</a>
+            </nav>
+            <!-- Actions -->
+            <div class="flex items-center gap-4">
+                <a href="https://wa.me/263773540198" class="p-2 text-[#25D366] hover:bg-[#25D366]/10 rounded-lg hidden sm:flex">
+                    <span class="material-symbols-outlined">chat</span>
+                </a>
+                <a href="quote.html" class="hidden lg:flex bg-energy-gold hover:bg-energy-gold/90 text-white px-6 py-2.5 rounded-lg font-bold text-sm tracking-wide transition-all shadow-lg shadow-energy-gold/20">
+                    Request a Quote
+                </a>
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-600 hover:bg-primary/5 rounded-lg">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu flex-col bg-white dark:bg-background-dark border-t border-primary/10 md:hidden">
+        <a class="px-6 py-3 text-sm font-bold text-primary border-l-4 border-primary bg-primary/5" href="home.html">Home</a>
+        <a class="px-6 py-3 text-sm font-medium hover:bg-slate-50" href="about.html">About</a>
+        <a class="px-6 py-3 text-sm font-medium hover:bg-slate-50" href="services.html">Products</a>
+        <a class="px-6 py-3 text-sm font-medium hover:bg-slate-50" href="markets.html">Markets</a>
+        <a class="px-6 py-3 text-sm font-medium hover:bg-slate-50" href="logistics.html">Logistics</a>
+        <a class="px-6 py-3 text-sm font-medium hover:bg-slate-50" href="compliance.html">Compliance</a>
+        <a class="px-6 py-3 text-sm font-medium hover:bg-slate-50" href="quote.html">Contact / Quote</a>
+        <a href="https://wa.me/263773540198" class="mx-6 my-3 bg-[#25D366] text-white text-center py-3 rounded-lg font-bold text-sm">WhatsApp Us</a>
+    </div>
 </header>
+
 <!-- Hero Section -->
 <section class="relative h-[600px] flex items-center overflow-hidden">
-<div class="absolute inset-0 bg-cover bg-center" data-alt="Industrial petroleum tanker terminal at sunset" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAwahecPp-0lA2gQoYvVNRY9t2DX6-mxZuEg3s1PsQToVgn8lmqANRFij04rWEvb0dlp883jJcUKqaLjALvzsWZgOGvjDky4WXLswVNnipTzSn13BxVqo5nTNxBGrP2XqPNtiaRPQCH_SAcyy4opYyjzm9uMJcOBOdUWGa7Zw-AeNYGXFIzrmSYa26Yg9rC11m3aF5zpch198fG1ZV1ZyGgeblXiBk-eyOgs4rMilcZfH6rXlmidZH1Op8vhjY1U4Bkh0ezlfserw')">
-<div class="absolute inset-0 hero-gradient"></div>
-</div>
-<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-<div class="max-w-2xl">
-<h1 class="text-4xl md:text-6xl font-black text-white leading-tight mb-6">
-                    Regional Market Access for Refined Petroleum Products
-                </h1>
-<p class="text-lg md:text-xl text-white/90 mb-10 leading-relaxed font-medium">
-                    Sourcing, due diligence and logistics for EN590 Jet A1, Gasoline and Fuel Oil across Southern Africa.
-                </p>
-<div class="flex flex-wrap gap-4">
-<a href="quote.html" class="bg-energy-gold hover:bg-energy-gold/90 text-white px-8 py-4 rounded-lg font-bold text-lg shadow-xl shadow-black/20 transition-transform active:scale-95">
-                        Request a Quote
-                    </a>
-<a href="https://wa.me/263773540198" class="border-2 border-white/40 hover:border-white text-white px-8 py-4 rounded-lg font-bold text-lg backdrop-blur-sm transition-colors">
-                        Speak to Sales
-                    </a>
-</div>
-</div>
-</div>
+    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAwahecPp-0lA2gQoYvVNRY9t2DX6-mxZuEg3s1PsQToVgn8lmqANRFij04rWEvb0dlp883jJcUKqaLjALvzsWZgOGvjDky4WXLswVNnipTzSn13BxVqo5nTNxBGrP2XqPNtiaRPQCH_SAcyy4opYyjzm9uMJcOBOdUWGa7Zw-AeNYGXFIzrmSYa26Yg9rC11m3aF5zpch198fG1ZV1ZyGgeblXiBk-eyOgs4rMilcZfH6rXlmidZH1Op8vhjY1U4Bkh0ezlfserw')">
+        <div class="absolute inset-0 hero-gradient"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div class="max-w-2xl">
+            <h1 class="text-4xl md:text-6xl font-black text-white leading-tight mb-6">
+                Regional Market Access for Refined Petroleum Products
+            </h1>
+            <p class="text-lg md:text-xl text-white/90 mb-10 leading-relaxed font-medium">
+                Sourcing, due diligence, and logistics for EN590 Diesel, Jet A1, Gasoline, and Fuel Oil across Southern Africa.
+            </p>
+            <div class="flex flex-wrap gap-4">
+                <a href="quote.html" class="bg-energy-gold hover:bg-energy-gold/90 text-white px-8 py-4 rounded-lg font-bold text-lg shadow-xl shadow-black/20 transition-transform active:scale-95">
+                    Request a Quote
+                </a>
+                <a href="https://wa.me/263773540198" class="border-2 border-white/40 hover:border-white text-white px-8 py-4 rounded-lg font-bold text-lg backdrop-blur-sm transition-colors">
+                    Speak to Sales
+                </a>
+            </div>
+        </div>
+    </div>
 </section>
+
 <!-- At-a-Glance Metrics -->
 <section class="py-12 bg-white dark:bg-background-dark border-b border-primary/5">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
-<div class="flex flex-col gap-1 p-6 border-l-4 border-energy-gold bg-primary/5 rounded-r-lg">
-<span class="text-slate-500 dark:text-slate-400 text-sm font-bold uppercase tracking-wider">Markets Served</span>
-<span class="text-4xl font-black text-primary">5</span>
-</div>
-<div class="flex flex-col gap-1 p-6 border-l-4 border-energy-gold bg-primary/5 rounded-r-lg">
-<span class="text-slate-500 dark:text-slate-400 text-sm font-bold uppercase tracking-wider">Product Lines</span>
-<span class="text-4xl font-black text-primary">4</span>
-</div>
-<div class="flex flex-col gap-1 p-6 border-l-4 border-energy-gold bg-primary/5 rounded-r-lg">
-<span class="text-slate-500 dark:text-slate-400 text-sm font-bold uppercase tracking-wider">Partnership Focus</span>
-<span class="text-4xl font-black text-primary">Growing</span>
-</div>
-<div class="flex flex-col gap-1 p-6 border-l-4 border-energy-gold bg-primary/5 rounded-r-lg">
-<span class="text-slate-500 dark:text-slate-400 text-sm font-bold uppercase tracking-wider">Logistics Reach</span>
-<span class="text-4xl font-black text-primary">SADC</span>
-</div>
-</div>
-</div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="flex flex-col gap-1 p-6 border-l-4 border-energy-gold bg-primary/5 rounded-r-lg">
+                <span class="text-slate-500 dark:text-slate-400 text-sm font-bold uppercase tracking-wider">Markets Served</span>
+                <span class="text-4xl font-black text-primary">5</span>
+            </div>
+            <div class="flex flex-col gap-1 p-6 border-l-4 border-energy-gold bg-primary/5 rounded-r-lg">
+                <span class="text-slate-500 dark:text-slate-400 text-sm font-bold uppercase tracking-wider">Product Lines</span>
+                <span class="text-4xl font-black text-primary">4</span>
+            </div>
+            <div class="flex flex-col gap-1 p-6 border-l-4 border-energy-gold bg-primary/5 rounded-r-lg">
+                <span class="text-slate-500 dark:text-slate-400 text-sm font-bold uppercase tracking-wider">Partnership Focus</span>
+                <span class="text-4xl font-black text-primary">Growing</span>
+            </div>
+            <div class="flex flex-col gap-1 p-6 border-l-4 border-energy-gold bg-primary/5 rounded-r-lg">
+                <span class="text-slate-500 dark:text-slate-400 text-sm font-bold uppercase tracking-wider">Logistics Reach</span>
+                <span class="text-4xl font-black text-primary">SADC</span>
+            </div>
+        </div>
+    </div>
 </section>
+
 <!-- Products Grid -->
 <section class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="mb-16">
-<h2 class="text-3xl font-black text-primary mb-4">Our Refined Products</h2>
-<div class="h-1.5 w-24 bg-energy-gold rounded-full"></div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-<!-- Product 1 -->
-<div class="group bg-white dark:bg-slate-800 rounded-xl shadow-sm hover:shadow-xl transition-all border border-primary/5 overflow-hidden">
-<div class="p-8">
-<div class="size-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
-<span class="material-symbols-outlined text-3xl">propane_tank</span>
-</div>
-<h3 class="text-xl font-bold mb-3">EN590 Diesel</h3>
-<p class="text-slate-600 dark:text-slate-400 text-sm mb-6">Ultra-low sulfur diesel for automotive and industrial use cases.</p>
-<ul class="space-y-2 mb-8 text-sm font-medium">
-<li class="flex items-center gap-2"><span class="size-1.5 rounded-full bg-energy-gold"></span> 10ppm / 50ppm</li>
-<li class="flex items-center gap-2"><span class="size-1.5 rounded-full bg-energy-gold"></span> Full SGS Quality Check</li>
-</ul>
-<div class="flex items-center justify-between border-t border-primary/5 pt-6">
-<a class="text-primary font-bold text-sm hover:underline" href="quote.html">Request Quote</a>
-<button class="text-energy-gold">
-<span class="material-symbols-outlined">picture_as_pdf</span>
-</button>
-</div>
-</div>
-</div>
-<!-- Product 2 -->
-<div class="group bg-white dark:bg-slate-800 rounded-xl shadow-sm hover:shadow-xl transition-all border border-primary/5 overflow-hidden">
-<div class="p-8">
-<div class="size-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
-<span class="material-symbols-outlined text-3xl">flight</span>
-</div>
-<h3 class="text-xl font-bold mb-3">Jet A1</h3>
-<p class="text-slate-600 dark:text-slate-400 text-sm mb-6">Aviation fuel meeting international ASTM D1655 standards.</p>
-<ul class="space-y-2 mb-8 text-sm font-medium">
-<li class="flex items-center gap-2"><span class="size-1.5 rounded-full bg-energy-gold"></span> Commercial Grade</li>
-<li class="flex items-center gap-2"><span class="size-1.5 rounded-full bg-energy-gold"></span> Strategic Reserves</li>
-</ul>
-<div class="flex items-center justify-between border-t border-primary/5 pt-6">
-<a class="text-primary font-bold text-sm hover:underline" href="quote.html">Request Quote</a>
-<button class="text-energy-gold">
-<span class="material-symbols-outlined">picture_as_pdf</span>
-</button>
-</div>
-</div>
-</div>
-<!-- Product 3 -->
-<div class="group bg-white dark:bg-slate-800 rounded-xl shadow-sm hover:shadow-xl transition-all border border-primary/5 overflow-hidden">
-<div class="p-8">
-<div class="size-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
-<span class="material-symbols-outlined text-3xl">local_gas_station</span>
-</div>
-<h3 class="text-xl font-bold mb-3">Gasoline</h3>
-<p class="text-slate-600 dark:text-slate-400 text-sm mb-6">High octane motor spirits for regional distribution networks.</p>
-<ul class="space-y-2 mb-8 text-sm font-medium">
-<li class="flex items-center gap-2"><span class="size-1.5 rounded-full bg-energy-gold"></span> RON 93 / 95</li>
-<li class="flex items-center gap-2"><span class="size-1.5 rounded-full bg-energy-gold"></span> Direct Terminal Access</li>
-</ul>
-<div class="flex items-center justify-between border-t border-primary/5 pt-6">
-<a class="text-primary font-bold text-sm hover:underline" href="quote.html">Request Quote</a>
-<button class="text-energy-gold">
-<span class="material-symbols-outlined">picture_as_pdf</span>
-</button>
-</div>
-</div>
-</div>
-<!-- Product 4 -->
-<div class="group bg-white dark:bg-slate-800 rounded-xl shadow-sm hover:shadow-xl transition-all border border-primary/5 overflow-hidden">
-<div class="p-8">
-<div class="size-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
-<span class="material-symbols-outlined text-3xl">factory</span>
-</div>
-<h3 class="text-xl font-bold mb-3">Fuel Oil</h3>
-<p class="text-slate-600 dark:text-slate-400 text-sm mb-6">Heavy fuel oils for maritime and power generation requirements.</p>
-<ul class="space-y-2 mb-8 text-sm font-medium">
-<li class="flex items-center gap-2"><span class="size-1.5 rounded-full bg-energy-gold"></span> HFO 180 / 380</li>
-<li class="flex items-center gap-2"><span class="size-1.5 rounded-full bg-energy-gold"></span> Bunkering Services</li>
-</ul>
-<div class="flex items-center justify-between border-t border-primary/5 pt-6">
-<a class="text-primary font-bold text-sm hover:underline" href="quote.html">Request Quote</a>
-<button class="text-energy-gold">
-<span class="material-symbols-outlined">picture_as_pdf</span>
-</button>
-</div>
-</div>
-</div>
-</div>
+    <div class="mb-16">
+        <h2 class="text-3xl font-black text-primary mb-4">Our Refined Products</h2>
+        <div class="h-1.5 w-24 bg-energy-gold rounded-full"></div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Product 1 -->
+        <div class="group bg-white dark:bg-slate-800 rounded-xl shadow-sm hover:shadow-xl transition-all border border-primary/5 overflow-hidden">
+            <div class="p-8">
+                <div class="size-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                    <span class="material-symbols-outlined text-3xl">propane_tank</span>
+                </div>
+                <h3 class="text-xl font-bold mb-3">EN590 Diesel</h3>
+                <p class="text-slate-600 dark:text-slate-400 text-sm mb-6">Ultra-low sulfur diesel for automotive and industrial use cases.</p>
+                <ul class="space-y-2 mb-8 text-sm font-medium">
+                    <li class="flex items-center gap-2"><span class="size-1.5 rounded-full bg-energy-gold"></span> 10ppm / 50ppm</li>
+                    <li class="flex items-center gap-2"><span class="size-1.5 rounded-full bg-energy-gold"></span> Full SGS Quality Check</li>
+                </ul>
+                <div class="flex items-center justify-between border-t border-primary/5 pt-6">
+                    <a class="text-primary font-bold text-sm hover:underline" href="quote.html">Request Quote</a>
+                </div>
+            </div>
+        </div>
+        <!-- Product 2 -->
+        <div class="group bg-white dark:bg-slate-800 rounded-xl shadow-sm hover:shadow-xl transition-all border border-primary/5 overflow-hidden">
+            <div class="p-8">
+                <div class="size-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                    <span class="material-symbols-outlined text-3xl">flight</span>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Jet A1</h3>
+                <p class="text-slate-600 dark:text-slate-400 text-sm mb-6">Aviation fuel meeting international ASTM D1655 standards.</p>
+                <ul class="space-y-2 mb-8 text-sm font-medium">
+                    <li class="flex items-center gap-2"><span class="size-1.5 rounded-full bg-energy-gold"></span> Commercial Grade</li>
+                    <li class="flex items-center gap-2"><span class="size-1.5 rounded-full bg-energy-gold"></span> Strategic Reserves</li>
+                </ul>
+                <div class="flex items-center justify-between border-t border-primary/5 pt-6">
+                    <a class="text-primary font-bold text-sm hover:underline" href="quote.html">Request Quote</a>
+                </div>
+            </div>
+        </div>
+        <!-- Product 3 -->
+        <div class="group bg-white dark:bg-slate-800 rounded-xl shadow-sm hover:shadow-xl transition-all border border-primary/5 overflow-hidden">
+            <div class="p-8">
+                <div class="size-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                    <span class="material-symbols-outlined text-3xl">local_gas_station</span>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Gasoline</h3>
+                <p class="text-slate-600 dark:text-slate-400 text-sm mb-6">High octane motor spirits for regional distribution networks.</p>
+                <ul class="space-y-2 mb-8 text-sm font-medium">
+                    <li class="flex items-center gap-2"><span class="size-1.5 rounded-full bg-energy-gold"></span> RON 93 / 95</li>
+                    <li class="flex items-center gap-2"><span class="size-1.5 rounded-full bg-energy-gold"></span> Direct Terminal Access</li>
+                </ul>
+                <div class="flex items-center justify-between border-t border-primary/5 pt-6">
+                    <a class="text-primary font-bold text-sm hover:underline" href="quote.html">Request Quote</a>
+                </div>
+            </div>
+        </div>
+        <!-- Product 4 -->
+        <div class="group bg-white dark:bg-slate-800 rounded-xl shadow-sm hover:shadow-xl transition-all border border-primary/5 overflow-hidden">
+            <div class="p-8">
+                <div class="size-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                    <span class="material-symbols-outlined text-3xl">factory</span>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Fuel Oil</h3>
+                <p class="text-slate-600 dark:text-slate-400 text-sm mb-6">Heavy fuel oils for maritime and power generation requirements.</p>
+                <ul class="space-y-2 mb-8 text-sm font-medium">
+                    <li class="flex items-center gap-2"><span class="size-1.5 rounded-full bg-energy-gold"></span> HFO 180 / 380</li>
+                    <li class="flex items-center gap-2"><span class="size-1.5 rounded-full bg-energy-gold"></span> Bunkering Services</li>
+                </ul>
+                <div class="flex items-center justify-between border-t border-primary/5 pt-6">
+                    <a class="text-primary font-bold text-sm hover:underline" href="quote.html">Request Quote</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
+
 <!-- Markets & Coverage -->
 <section class="py-24 bg-primary/5">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex flex-col lg:flex-row gap-16 items-center">
-<div class="flex-1">
-<h2 class="text-3xl font-black text-primary mb-6">Markets &amp; Coverage</h2>
-<p class="text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
-                        Strategically positioned to serve the Southern African Development Community (SADC). We facilitate supply partnerships across Zimbabwe, Zambia, Botswana, Malawi, and Mozambique.
-                    </p>
-<div class="grid grid-cols-2 gap-4">
-<div class="flex items-center gap-3 bg-white dark:bg-slate-800 p-4 rounded-lg shadow-sm">
-<span class="material-symbols-outlined text-energy-gold">location_on</span>
-<span class="font-bold">Botswana</span>
-</div>
-<div class="flex items-center gap-3 bg-white dark:bg-slate-800 p-4 rounded-lg shadow-sm">
-<span class="material-symbols-outlined text-energy-gold">location_on</span>
-<span class="font-bold">Zimbabwe</span>
-</div>
-<div class="flex items-center gap-3 bg-white dark:bg-slate-800 p-4 rounded-lg shadow-sm">
-<span class="material-symbols-outlined text-energy-gold">location_on</span>
-<span class="font-bold">Malawi</span>
-</div>
-<div class="flex items-center gap-3 bg-white dark:bg-slate-800 p-4 rounded-lg shadow-sm">
-<span class="material-symbols-outlined text-energy-gold">location_on</span>
-<span class="font-bold">Zambia</span>
-</div>
-</div>
-</div>
-<div class="flex-1 w-full h-[400px] bg-slate-200 dark:bg-slate-700 rounded-2xl overflow-hidden relative shadow-2xl shadow-primary/20" data-location="Southern Africa" style="">
-<!-- Map Placeholder -->
-<div class="absolute inset-0 bg-cover bg-center opacity-80" data-alt="Stylized map of Southern Africa region" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDCCE8ZmMRzXGOv6qiPrce998OX3ONrhjzTT8SFpp22hI-3jcpbiZ48UXdu547470tgNOaoPk9hrxrU1rpQstGa7H7qbBEBV4zHXZlTAXqtfXuVopR51AV9DkAZ0RJobFPgWd9uZKg-_Ah3VclPZTibJtTsMWgP_zYjA_GyIMshdOaDJEeCNG3KT0kUJhMQjltHHwnbfeiHU0YISjavjy8w6_eKdRjRaXk_7FQUl90Mx_BnnFH5kcUCzUT4frHrYdlugec45cJNPw')"></div>
-<!-- Map Pins -->
-<div class="absolute top-1/4 left-1/2 text-energy-gold">
-<span class="material-symbols-outlined fill-1 text-4xl drop-shadow-lg">location_on</span>
-</div>
-<div class="absolute bottom-1/3 right-1/4 text-energy-gold">
-<span class="material-symbols-outlined fill-1 text-4xl drop-shadow-lg">location_on</span>
-</div>
-<div class="absolute top-1/2 left-1/3 text-energy-gold">
-<span class="material-symbols-outlined fill-1 text-4xl drop-shadow-lg">location_on</span>
-</div>
-</div>
-</div>
-</div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row gap-16 items-center">
+            <div class="flex-1">
+                <h2 class="text-3xl font-black text-primary mb-6">Markets &amp; Coverage</h2>
+                <p class="text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+                    Strategically positioned to serve the Southern African Development Community (SADC). We facilitate supply partnerships across Zimbabwe, Zambia, Botswana, Malawi, and Mozambique.
+                </p>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="flex items-center gap-3 bg-white dark:bg-slate-800 p-4 rounded-lg shadow-sm">
+                        <span class="material-symbols-outlined text-energy-gold">location_on</span>
+                        <span class="font-bold">Botswana</span>
+                    </div>
+                    <div class="flex items-center gap-3 bg-white dark:bg-slate-800 p-4 rounded-lg shadow-sm">
+                        <span class="material-symbols-outlined text-energy-gold">location_on</span>
+                        <span class="font-bold">Zimbabwe</span>
+                    </div>
+                    <div class="flex items-center gap-3 bg-white dark:bg-slate-800 p-4 rounded-lg shadow-sm">
+                        <span class="material-symbols-outlined text-energy-gold">location_on</span>
+                        <span class="font-bold">Malawi</span>
+                    </div>
+                    <div class="flex items-center gap-3 bg-white dark:bg-slate-800 p-4 rounded-lg shadow-sm">
+                        <span class="material-symbols-outlined text-energy-gold">location_on</span>
+                        <span class="font-bold">Zambia</span>
+                    </div>
+                    <div class="flex items-center gap-3 bg-white dark:bg-slate-800 p-4 rounded-lg shadow-sm col-span-2">
+                        <span class="material-symbols-outlined text-energy-gold">location_on</span>
+                        <span class="font-bold">Mozambique</span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-1 w-full h-[400px] bg-slate-200 dark:bg-slate-700 rounded-2xl overflow-hidden relative shadow-2xl shadow-primary/20">
+                <div class="absolute inset-0 bg-cover bg-center opacity-80" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDCCE8ZmMRzXGOv6qiPrce998OX3ONrhjzTT8SFpp22hI-3jcpbiZ48UXdu547470tgNOaoPk9hrxrU1rpQstGa7H7qbBEBV4zHXZlTAXqtfXuVopR51AV9DkAZ0RJobFPgWd9uZKg-_Ah3VclPZTibJtTsMWgP_zYjA_GyIMshdOaDJEeCNG3KT0kUJhMQjltHHwnbfeiHU0YISjavjy8w6_eKdRjRaXk_7FQUl90Mx_BnnFH5kcUCzUT4frHrYdlugec45cJNPw')"></div>
+                <div class="absolute top-1/4 left-1/2 text-energy-gold">
+                    <span class="material-symbols-outlined fill-1 text-4xl drop-shadow-lg">location_on</span>
+                </div>
+                <div class="absolute bottom-1/3 right-1/4 text-energy-gold">
+                    <span class="material-symbols-outlined fill-1 text-4xl drop-shadow-lg">location_on</span>
+                </div>
+                <div class="absolute top-1/2 left-1/3 text-energy-gold">
+                    <span class="material-symbols-outlined fill-1 text-4xl drop-shadow-lg">location_on</span>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
+
 <!-- Transaction Process -->
 <section class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center mb-20">
-<h2 class="text-3xl font-black text-primary mb-4">Transaction Process</h2>
-<p class="text-slate-600 dark:text-slate-400">Our structured workflow ensures security and transparency at every stage.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-4 gap-4 relative">
-<!-- Process Step 1 -->
-<div class="relative text-center p-8 bg-white dark:bg-slate-800 rounded-2xl border border-primary/5 shadow-sm">
-<div class="size-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-black">1</div>
-<h4 class="font-bold mb-2">Request &amp; KYC</h4>
-<p class="text-xs text-slate-500">Submit SCO request and complete initial due diligence.</p>
-</div>
-<!-- Process Step 2 -->
-<div class="relative text-center p-8 bg-white dark:bg-slate-800 rounded-2xl border border-primary/5 shadow-sm">
-<div class="size-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-black">2</div>
-<h4 class="font-bold mb-2">SPA Negotiation</h4>
-<p class="text-xs text-slate-500">Drafting and signing of the Sale and Purchase Agreement.</p>
-</div>
-<!-- Process Step 3 -->
-<div class="relative text-center p-8 bg-white dark:bg-slate-800 rounded-2xl border border-primary/5 shadow-sm">
-<div class="size-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-black">3</div>
-<h4 class="font-bold mb-2">Verification</h4>
-<p class="text-xs text-slate-500">POP and POF verification via secured banking channels.</p>
-</div>
-<!-- Process Step 4 -->
-<div class="relative text-center p-8 bg-white dark:bg-slate-800 rounded-2xl border border-primary/5 shadow-sm">
-<div class="size-16 bg-energy-gold text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-black">4</div>
-<h4 class="font-bold mb-2">Loading &amp; SGS</h4>
-<p class="text-xs text-slate-500">Quality inspection and final logistics dispatch.</p>
-</div>
-</div>
+    <div class="text-center mb-20">
+        <h2 class="text-3xl font-black text-primary mb-4">Transaction Process</h2>
+        <p class="text-slate-600 dark:text-slate-400">Our structured workflow ensures security and transparency at every stage.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 relative">
+        <div class="relative text-center p-8 bg-white dark:bg-slate-800 rounded-2xl border border-primary/5 shadow-sm">
+            <div class="size-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-black">1</div>
+            <h4 class="font-bold mb-2">Request &amp; KYC</h4>
+            <p class="text-xs text-slate-500">Submit SCO request and complete initial due diligence.</p>
+        </div>
+        <div class="relative text-center p-8 bg-white dark:bg-slate-800 rounded-2xl border border-primary/5 shadow-sm">
+            <div class="size-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-black">2</div>
+            <h4 class="font-bold mb-2">SPA Negotiation</h4>
+            <p class="text-xs text-slate-500">Drafting and signing of the Sale and Purchase Agreement.</p>
+        </div>
+        <div class="relative text-center p-8 bg-white dark:bg-slate-800 rounded-2xl border border-primary/5 shadow-sm">
+            <div class="size-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-black">3</div>
+            <h4 class="font-bold mb-2">Verification</h4>
+            <p class="text-xs text-slate-500">POP and POF verification via secured banking channels.</p>
+        </div>
+        <div class="relative text-center p-8 bg-white dark:bg-slate-800 rounded-2xl border border-primary/5 shadow-sm">
+            <div class="size-16 bg-energy-gold text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-black">4</div>
+            <h4 class="font-bold mb-2">Loading &amp; SGS</h4>
+            <p class="text-xs text-slate-500">Quality inspection and final logistics dispatch.</p>
+        </div>
+    </div>
 </section>
+
+<!-- Latest Updates (NEW SECTION) -->
+<section class="py-16 bg-white dark:bg-background-dark border-t border-primary/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-12">
+            <h2 class="text-3xl font-black text-primary mb-4">Latest Updates</h2>
+            <div class="h-1.5 w-24 bg-energy-gold rounded-full"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-background-light dark:bg-slate-800 rounded-xl p-6 border border-primary/5">
+                <span class="text-xs font-bold text-energy-gold uppercase tracking-wider">Company News</span>
+                <h4 class="text-lg font-bold mt-2 mb-3">Expanding Partnership Network Across SADC</h4>
+                <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">LusFam Energy Trading continues to strengthen its logistics partner network across Zimbabwe, Zambia, and Mozambique to better serve regional fuel demand.</p>
+                <span class="text-xs text-slate-400">Q1 2026</span>
+            </div>
+            <div class="bg-background-light dark:bg-slate-800 rounded-xl p-6 border border-primary/5">
+                <span class="text-xs font-bold text-energy-gold uppercase tracking-wider">Market Insight</span>
+                <h4 class="text-lg font-bold mt-2 mb-3">Southern African Fuel Demand Outlook</h4>
+                <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">Growing industrial activity and infrastructure development across the region continues to drive demand for refined petroleum products.</p>
+                <span class="text-xs text-slate-400">2026 Outlook</span>
+            </div>
+            <div class="bg-background-light dark:bg-slate-800 rounded-xl p-6 border border-primary/5">
+                <span class="text-xs font-bold text-energy-gold uppercase tracking-wider">Compliance</span>
+                <h4 class="text-lg font-bold mt-2 mb-3">Corporate Profile &amp; Documentation Now Available</h4>
+                <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">Our updated corporate profile and compliance documentation is available for review by verified partners and prospective trading houses.</p>
+                <a href="compliance.html" class="text-primary text-sm font-bold hover:underline">View Compliance →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Footer -->
 <footer class="bg-primary text-white py-16">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-<div class="col-span-1 md:col-span-2">
-<div class="flex items-center gap-2 mb-6">
-<img src="logo_lusfam.jpeg" alt="LusFam" class="h-6 w-auto"/>
-<span class="text-xl font-black">LusFam Energy Trading</span>
-</div>
-<p class="text-white/70 max-w-sm mb-6">
-                        Facilitating reliable petroleum supply partnerships between international traders and Southern African fuel markets.
-                    </p>
-<div class="flex gap-4">
-<a class="size-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-energy-gold transition-colors" href="mailto:info@lusfamenergy.com">
-<span class="material-symbols-outlined">alternate_email</span>
-</a>
-<a class="size-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-[#25D366] transition-colors" href="https://wa.me/263773540198">
-<span class="material-symbols-outlined">chat</span>
-</a>
-</div>
-</div>
-<div>
-<h5 class="font-bold mb-6 text-energy-gold uppercase tracking-widest text-xs">Quick Links</h5>
-<ul class="space-y-4 text-sm text-white/70">
-<li><a class="hover:text-white transition-colors" href="services.html">Product Specifications</a></li>
-<li><a class="hover:text-white transition-colors" href="compliance.html">Corporate Governance</a></li>
-<li><a class="hover:text-white transition-colors" href="about.html">Partner Network</a></li>
-<li><a class="hover:text-white transition-colors" href="logistics.html">Logistics Maps</a></li>
-</ul>
-</div>
-<div>
-<h5 class="font-bold mb-6 text-energy-gold uppercase tracking-widest text-xs">Contact</h5>
-<ul class="space-y-4 text-sm text-white/70">
-<li class="flex items-start gap-3">
-<span class="material-symbols-outlined text-sm pt-1">location_on</span>
-                            Harare, Zimbabwe
-                        </li>
-<li class="flex items-center gap-3">
-<span class="material-symbols-outlined text-sm">mail</span>
-                            <a href="mailto:info@lusfamenergy.com" class="hover:text-white">info@lusfamenergy.com</a>
-                        </li>
-</ul>
-</div>
-</div>
-<div class="border-t border-white/10 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/40">
-<p>LusFam Energy Trading — a division of LusFam Trust Investments (Pvt) Ltd.</p>
-<div class="flex gap-8">
-<a class="hover:text-white" href="#">Privacy Policy</a>
-<a class=
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+            <div class="col-span-1 md:col-span-2">
+                <div class="flex items-center gap-2 mb-6">
+                    <img src="logo_lusfam.jpeg" alt="LusFam" class="h-6 w-auto"/>
+                    <span class="text-xl font-black">LusFam Energy Trading</span>
+                </div>
+                <p class="text-white/70 max-w-sm mb-6">
+                    Facilitating reliable petroleum supply partnerships between international traders and Southern African fuel markets.
+                </p>
+                <div class="flex gap-4">
+                    <a class="size-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-energy-gold transition-colors" href="mailto:info@lusfamenergy.com">
+                        <span class="material-symbols-outlined">alternate_email</span>
+                    </a>
+                    <a class="size-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-[#25D366] transition-colors" href="https://wa.me/263773540198">
+                        <span class="material-symbols-outlined">chat</span>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h5 class="font-bold mb-6 text-energy-gold uppercase tracking-widest text-xs">Quick Links</h5>
+                <ul class="space-y-4 text-sm text-white/70">
+                    <li><a class="hover:text-white transition-colors" href="services.html">Product Specifications</a></li>
+                    <li><a class="hover:text-white transition-colors" href="compliance.html">Corporate Governance</a></li>
+                    <li><a class="hover:text-white transition-colors" href="about.html">About Us</a></li>
+                    <li><a class="hover:text-white transition-colors" href="logistics.html">Logistics</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-bold mb-6 text-energy-gold uppercase tracking-widest text-xs">Contact</h5>
+                <ul class="space-y-4 text-sm text-white/70">
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-sm pt-1">location_on</span>
+                        Harare, Zimbabwe
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-sm">mail</span>
+                        <a href="mailto:info@lusfamenergy.com" class="hover:text-white">info@lusfamenergy.com</a>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-sm">phone</span>
+                        <a href="tel:+263773540198" class="hover:text-white">+263 773 540 198</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-white/10 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/40">
+            <p>© 2026 LusFam Energy Trading — a division of LusFam Trust Investments (Pvt) Ltd.</p>
+            <div class="flex gap-8">
+                <a class="hover:text-white" href="#">Privacy Policy</a>
+                <a class="hover:text-white" href="#">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Mobile menu toggle
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.toggle('active');
+    });
+</script>
+</body></html>
